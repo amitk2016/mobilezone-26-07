@@ -1,3 +1,7 @@
+Primary Colors (Logo n main ): #f0cc56*/
+
+
+
 .marketing {
 	text-align: center;
 	margin-bottom:20px;
@@ -21,8 +25,96 @@ hr{
 }
 /*----------------------------------Homepage styles -------------------------------------------*/
 
+/*-----Navbar Style here-----*/
+.brand-img{
+	max-height:100%;
+}
+.brand-box1{
+	padding-left: 20px;
+}
+.brand-link{
+	padding:2px;
+}
+
+.nav-ul{
+	background-color:rgba(0,0,0,0.8);
+}
+.nav-ul li{
+	background-color:rgba(0,0,0,0.8);
+}
+.nav-ul li a {
+	color:#fff;
+}
+
+.main-text{
+	background-image: url(../assets/images/1.jpg);	
+	background-color:#f0cc56;
+}
+
+.home-heading{
+	text-align: center;
+	padding-top:32px;
+	height:25vh;
+	/*background-color: red;*/
+}
+.home-heading h1{
+	font-size:40px;
+	letter-spacing:2px;
+	text-shadow: 1.5px 1.5px #000;
+}
+.home-heading h5{
+	text-transform:uppercase;
+	letter-spacing: 3px;
+	margin-left: 0;
+	text-shadow: 1px 1px #000;
+}
+.hr-style{
+	border-top: 2px solid #8c8b8b;
+	margin-top: 0;
+}
+
+/*----hot products style---*/
+
+.hot-products {
+	text-align: center;
+	margin:0;
+	padding:0;
+	width:48%;
+	height:70vh;
+	/*border: 1px solid #000;*/
+}
+.hot-img{
+	padding:0;
+}
+h1.hot-heading{
+	text-align: center;
+}
+.hot-box{
+	/*background-color:green;*/
+	margin:0;
+}
+.hot-row{
+	margin:0;
+	padding-left:15px;
+	max-width:100%;
+}
+.tablets{
+	margin-left:30px;
+}
+
+/*----hot products style ends ------*/
+
+
+
+
+
+/*---Navbar style ends here-----*/
+
 /*--slider styles-------*/
 
+.item{
+	max-height:70vh;
+}
 
 /*--slider styles ends--*/
 
@@ -33,7 +125,7 @@ hr{
 
 /*----------------------------------Registration form styles -------------------------------------------*/
 .rg-form{
-	width:600px;
+	width:550px;
 	position: absolute;
 	top:10%;
 	left:30%;
@@ -189,4 +281,4 @@ ul.phone-mail {
 	width: 100%;
 	height:300px;
 }
-/*-----------------------------contact style ends-----------------*/
+/*-----------------------------contact style ends-----------------

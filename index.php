@@ -24,38 +24,42 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                       <div class="item active">
-                        <img src="assets/images/1.jpg" alt="image-1">
+                        <div class="slider-box1">
+                          
+                        </div>
+                        <img src="assets/images/sl8.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          <h3>Phone1</h3>
-                          <p>Span Span Span</p>
+                          
                         </div>
                       </div>
                        <div class="item ">
-                        <img src="assets/images/3.jpg" alt="image-1">
+                       <div class="slider-box2">
+                          
+                        </div>
+                        <img src="assets/images/sl2.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          <h3>Phone2</h3>
-                          <p>Span Span Span</p>
+                          
                         </div>
                       </div>
                        <div class="item ">
-                        <img src="assets/images/4.jpg" alt="image-1">
+                       <div class="slider-box3">
+                          
+                        </div>
+                        <img src="assets/images/sl3.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          <h3>Phone3</h3>
-                          <p>Span Span Span</p>
+                         
                         </div>
                       </div>
                        <div class="item ">
-                        <img src="assets/images/5.jpg" alt="image-1">
+                        <img src="assets/images/sl7.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          <h3>Phone4</h3>
-                          <p>Span Span Span</p>
+                          
                         </div>
                       </div>
                       <div class="item">
-                        <img src="assets/images/2.jpg" alt="image-2">
+                        <img src="assets/images/sl5.jpg" alt="image-2">
                         <div class="carousel-caption">
-                          <h3>Phone5</h3>
-                          <p>Span Span Span</p>
+                          
                         </div>
                       </div>
                       ...
@@ -75,44 +79,42 @@
       
 
     <!-- Slides show ends here  -->
+    <div class="container-fluid main-text">
+      <div class="row">
+        <div class="col-md-12 home-heading">
+          <h1>Welcome to MobileZone</h1>
+          <h5>the power you need</h5>
+          <!-- <img src="assets/images/MobileZone.png" alt="company name"> -->
+        </div>
+      </div>
+    </div>
+    <hr class="hr-style">
+
+
+
+
+
 
     <div class="clearfix" style="margin-bottom:20px;"></div>
-      <div class="container"></div>
 
-        <div class="row marketing">
+      <div class="container-fluid hot-box">
+        <h1 class="hot-heading">Hot Products</h1>
+        <div class="row hot-row">
 
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <img src="assets/images/11.jpg" alt="cat image" class="img-circle">
+          <div class="col-md-6 col-sm-4 col-xs-12 hot-products">
+            <img src="assets/images/Phone-mixed.jpg" alt="cat image" class="img-responsive hot-img">
             <h2>Title here</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit</p>
+            
             <a href="#" class="btn btn-primary">Details..</a>
           </div>
-          <div class="row marketing">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <img src="assets/images/11.jpg" alt="cat image" class="img-circle">
+          <div class="col-md-6 col-sm-4 col-xs-12 hot-products tablets">
+            <img src="assets/images/tablets.jpg" alt="phone products image" class="img-responsive hot-img">
             <h2>Title here</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit</p>
+           
             <a href="#" class="btn btn-primary">Details..</a>
           </div>
-          <div class="row marketing">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <img src="assets/images/11.jpg" alt="cat image" class="img-circle">
-            <h2>Title here</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit</p>
-            <a href="#" class="btn btn-primary">Details..</a>
-          </div>
-
-
         </div>
+      </div>
 
 
     <!-- Marketing Starts here -->

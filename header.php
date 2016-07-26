@@ -3,8 +3,12 @@
       <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" style=" border-radius:0px !important; margin-bottom:0px;">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php">Mobilezone</a>
+                <div class="navbar-header brand-box1">
+
+                    <a class="navbar-brand brand-link" href="index.php">
+                       <img alt="Brand" src="assets/images/logo1.png" class="brand-img">
+                    </a>
+                  <!-- <a class="navbar-brand" href="index.php">Mobilezone</a> -->
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,7 +19,7 @@
 
                     <li class="dropdown">
                         <a href="products.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu nav-ul">
                             <li><a href="#">About Us</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Blog</a></li>                           
@@ -25,7 +29,7 @@
                     </li>
                     <li class="dropdown">
                         <a href="products.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu nav-ul">
                             <li><a href="products.php">Mobiles</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="products.php">Tablets</a></li>
