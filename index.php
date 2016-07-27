@@ -98,21 +98,25 @@
     <div class="clearfix" style="margin-bottom:20px;"></div>
 
       <div class="container-fluid hot-box">
-        <h1 class="hot-heading">Hot Products</h1>
+        <h1 class="hot-heading">Products</h1>
         <div class="row hot-row">
 
-          <div class="col-md-6 col-sm-4 col-xs-12 hot-products">
-            <img src="assets/images/Phone-mixed.jpg" alt="cat image" class="img-responsive hot-img">
-            <h2>Title here</h2>
-            
-            <a href="#" class="btn btn-primary">Details..</a>
+          <div class="col-md-4 col-sm-4 col-xs-12 hot-products">
+            <img src="assets/images/phones.jpg" alt="cat image" class="img-responsive hot-img">
+            <h2 class="p-heading">Phones</h2>
+            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
           </div>
-          <div class="col-md-6 col-sm-4 col-xs-12 hot-products tablets">
-            <img src="assets/images/tablets.jpg" alt="phone products image" class="img-responsive hot-img">
-            <h2>Title here</h2>
-           
-            <a href="#" class="btn btn-primary">Details..</a>
+          <div class="col-md-4 col-sm-4 col-xs-12 hot-products tablets">
+            <img src="assets/images/tablets1.jpg" alt="phone products image" class="img-responsive hot-img">
+            <h2 class="p-heading tablet-h">Tablets</h2>
+            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
           </div>
+           <div class="col-md-4 col-sm-4 col-xs-12 hot-products tablets">
+            <img src="assets/images/accessories2.jpg" alt="phone products image" class="img-responsive hot-img">
+            <h2 class="p-heading accessories-h">Accessories</h2>
+            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
+          </div>
+
         </div>
       </div>
 
@@ -121,6 +125,7 @@
 
     <hr class="divider">
     <!-- Products thumbnails -->
+      <h1 class="latest">Latest Products</h1>
       <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="thumbnail">

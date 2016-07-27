@@ -9,7 +9,7 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
           <p class="lead">Category</p>
             <div class="list-group">
-                <a href="#" class="list-group-item active">Iphone</a>
+                <a href="#" class="list-group-item active">Apple</a>
                 <a href="#" class="list-group-item">Samsung</a>
                 <a href="#" class="list-group-item">Xaomi</a>
                 <a href="#" class="list-group-item">Nokia</a>
