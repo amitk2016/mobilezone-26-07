@@ -145,7 +145,7 @@ h1.hot-heading{
 
 /*---Clearance Style Starts ----*/
 .clearance{
-	background-color:#e74c3c;
+	background-color:#daad86;
 	height:200px;
 	text-align: center;
 
@@ -178,6 +178,18 @@ h1.hot-heading{
 }
 
 /*---Clearance Style Ends here ----*/
+
+
+/*----Newsletter Styles here-------*/
+.news-box{
+	height:250px;
+	background-image:url(../assets/images/2.jpg);
+	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.9);
+}
+
+/*----Newsletter Styles ends here-------*/
+
 
 
 /*----------------------------------Homepage styles Ends -------------------------------------------*/
