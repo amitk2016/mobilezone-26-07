@@ -145,7 +145,7 @@ h1.hot-heading{
 
 /*---Clearance Style Starts ----*/
 .clearance{
-	background-color:#daad86;
+	background-color:#e74c3c;
 	height:200px;
 	text-align: center;
 
@@ -184,10 +184,29 @@ h1.hot-heading{
 .news-box{
 	height:250px;
 	background-image:url(../assets/images/2.jpg);
-	background-color: rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.9);
+	background-color:rgba(0,0,0,0.9);
+	display: table;
+	width:100vw;
+	padding-top:35px;
 }
+.news-row h3{
+	margin-bottom:25px;
+}
+.news-email{
+	width:300px;
+	display: table-cell;
+	margin:0,auto;
+	vertical-align:middle;
+	text-align: center;
+	margin-bottom:25px;
+}
+.signup{
+	width:100px;
+	display: table-cell;
+	margin:0,auto;
+	vertical-align:middle;
 
+}
 /*----Newsletter Styles ends here-------*/
 
 

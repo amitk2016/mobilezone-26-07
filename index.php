@@ -129,7 +129,7 @@
               <li><span>Limited time only</span></li>
               <li><span>Prices as marked</span></li>
             </ul>
-       <button class="btn btn-danger btn-lg">
+       <button class="btn btn-warning btn-lg">
          Buy Now
        </button>
         
@@ -223,10 +223,12 @@
       </div>
 
       <div class="container-fluid news-box">
-        <div class="row">
-        <h3>Get Exclusive News and Offer</h3>
-        <input class="form-control" type="email" name="n-email" value="Enter your email address">
-        <button class="btn btn-default">Sign Up</button>
+        <div class="row news-row">
+          <h3>Get Exclusive News and Offer</h3>
+          <div>
+            <input class="form-control news-email" type="email" name="n-email" value="Enter your email address">
+          </div>
+          <button class="btn btn-default signup btn-block">Sign Up</button>
         </div>
         
       </div>
