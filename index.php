@@ -116,13 +116,26 @@
             <h2 class="p-heading accessories-h">Accessories</h2>
             <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
           </div>
-
         </div>
       </div>
 
-
+      <!-- Clearance Sale box -->
+      <div class="container-fluid clearance">
+        <div class="row">
+            <h3>Clearance Sale</h3>
+            <h1>Save an Extra 10% </h1>
+            <ul>
+              <li><span>On Already reduced prices</span></li>
+              <li><span>Limited time only</span></li>
+              <li><span>Prices as marked</span></li>
+            </ul>
+       <button class="btn btn-warning btn-lg">
+         Buy Now
+       </button>
+        
+      </div>
+      <!-- Clearance box ends -->
     <!-- Marketing Starts here -->
-
     <hr class="divider">
     <!-- Products thumbnails -->
       <h1 class="latest">Latest Products</h1>
