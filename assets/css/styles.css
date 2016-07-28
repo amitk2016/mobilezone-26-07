@@ -183,8 +183,11 @@ h1.hot-heading{
 /*----Newsletter Styles here-------*/
 .news-box{
 	height:250px;
-	background-image:url(../assets/images/2.jpg);
-	background-color:rgba(0,0,0,0.9);
+	/*background-color:rgba(0,0,0,0.5);*/
+	background-image:url(../images/2.jpg);
+	background-position: center center;
+	background-size: cover;
+	
 	display: table;
 	width:100vw;
 	padding-top:35px;
