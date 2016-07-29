@@ -230,16 +230,60 @@
           </div>
           <button class="btn btn-default signup btn-block">Sign Up</button>
         </div>
-        
+        <div class="container-fluid n-trans">
+        </div>
+      </div>
+
+      <div class="container-fluid payment">
+          <span>Secure Payment:</span><img src="assets/images/payment.png">
       </div>
 
     <!-- end product thumbnails -->
-    <hr class="divider">
+    <hr class="divider line-after-payment">
 
     <footer>
-    <p class="pull-right"><a href="#">Back to Top</a></p>
-    <p>Designed By Company <a href="#">Privacy</a><a href="#">Terms</a></p>
-      
+      <div class="container-fluid footer-box">
+        <div class="container col-md-5">
+          <div class="row footer-l-row">
+            <div class="col-md-6 r-l-box">
+                <h4>Shop</h4>
+                <span><a href="#">Apple</a></span>
+                <span><a href="#">Samsung</a></span>
+                <span><a href="#">Xiaomi</a></span>
+                <span><a href="#">MIcrosoft</a></span>
+                <span><a href="#">All Products</a></span>
+            </div>
+            <div class="col-md-6 r-r-box">
+                <h4>About Us</h4>
+                <span><a href="#">About Us</a></span>
+                <span><a href="#">News</a></span>
+                <span><a href="#">Sitemap</a></span>              
+            </div>
+          </div>
+        </div>
+
+         <div class="container col-md-7">
+          <div class="row footer-r-row">
+            <div class="col-md-5 r-l-box">
+                <h4>Contact Us</h4>
+                <span><a href="#">Contact</a></span>
+                <span><a href="#">Newsletter</a></span>
+            </div>
+            <div class="col-md-7 r-r-box">
+                <ul>
+                  <li><a href="#"><img src="assets/images/fb.png"></a></li>
+                  <li><a href="#"><img src="assets/images/twitter.png"></a></li>
+                  <li><a href="#"><img src="assets/images/gplus.png"></a></li>
+                  <li><a href="#"><img src="assets/images/linkedin.png"></a></li>
+                  <li><a href="#"><img src="assets/images/instagram.png"></a></li>
+                </ul>
+                <img src="assets/images/map.png">
+            </div>
+          </div>
+        </div>
+        <p class="pull-right"><a href="#">Back to Top</a></p>
+        <p>Designed By Company <a href="#">Privacy</a><a href="#">Terms</a></p>
+      </div>
     </footer>
     <!-- Marketing Ends here -->
 
