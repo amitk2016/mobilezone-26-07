@@ -437,18 +437,18 @@ ul.phone-mail {
 	
 }
 .r-r-box ul li a img{
-	width:35px;
+	width:30px;
 }
 .r-r-box img{
 	width:250px;
 }
 .r-r-box ul{
-	padding-left:18px;
+	padding-left:0px;
 }
 .r-r-box ul li{
 	margin-bottom:25px;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right:20px;
 }
 
 
