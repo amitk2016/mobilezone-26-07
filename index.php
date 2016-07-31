@@ -129,97 +129,60 @@
               <li><span>Limited time only</span></li>
               <li><span>Prices as marked</span></li>
             </ul>
-       <button class="btn btn-warning btn-lg">
-         Buy Now
-       </button>
-        
+             <button class="btn btn-warning btn-lg">
+               Buy Now
+             </button>
+        </div>
       </div>
+
       <!-- Clearance box ends -->
     <!-- Marketing Starts here -->
-    <hr class="divider">
+    <hr class="divider latest-d">
     <!-- Products thumbnails -->
       <h1 class="latest">Latest Products</h1>
-      <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img src="assets/images/product-1.jpg" alt="iphone1">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img src="assets/images/product-1.jpg" alt="iphone1">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img src="assets/images/product-1.jpg" alt="iphone1">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img src="assets/images/product-1.jpg" alt="iphone1">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-              <img src="assets/images/product-1.jpg" alt="iphone1">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-          </div>
+            </div>    
+        </div>
       </div>
 
       <div class="container-fluid news-box">
@@ -281,8 +244,6 @@
             </div>
           </div>
         </div>
-        <p class="pull-right"><a href="#">Back to Top</a></p>
-        <p>Designed By Company <a href="#">Privacy</a><a href="#">Terms</a></p>
       </div>
     </footer>
     <!-- Marketing Ends here -->
