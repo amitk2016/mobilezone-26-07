@@ -4,7 +4,7 @@
 
     <!-- Content Starts here  -->
 
-    <div class="container">
+    <div class="container cart-box">
         <div class="row">
           <div class="col-md-12 col-xs-12">
             <div class="panel panel-info">

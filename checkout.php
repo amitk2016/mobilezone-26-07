@@ -3,7 +3,7 @@
   <?php include("header.php"); ?>
 
     <!-- Content goes here  -->
-    <div class="container">
+    <div class="container checkout-box">
       <div class="row">
         
         <div class="col-md-7 col-sm-7 col-xs-12" >
