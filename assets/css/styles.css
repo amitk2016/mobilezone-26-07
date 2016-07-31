@@ -504,7 +504,32 @@ ul.phone-mail {
 }
 
 
+/*---------------------------Error page-------------------------------- */
 
+#error{
+	background-color: #9b59b6;
+	height:100vh;
+	text-align: center;
+	padding-top:40vh;
+}
+#error h1{
+	color:#34495e ;
+	font-size:120px;
+	margin:0;
+}
+#error h2{
+	color:#34495e ;
+	font-size:50px;
+	margin:0;
+}
+#error p{
+	font-size:20px;
+	margin:0;
+}
+
+
+
+/*---------------------------------Error page ends here------------------------------------------------*/
 
 
 

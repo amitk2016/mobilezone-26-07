@@ -1,263 +1,54 @@
-<?php include("dbconnect.php"); ?>
+<?php 
+
+// require all the third party app 
+require 'vendor/autoload.php';
 
 
- <?php  include("head.php"); ?>
+// create instance of the plate library 
+$plates = new League\Plates\Engine('app/templates');
 
-   
-   <?php include("header.php"); ?>
+//if user has requested a page 
+
+if ( isset($_GET['page']) ) {
+  
+  $page = $_GET['page'];
+}else{
+
+  $page = 'home';
+}
+
+switch ($page) {
+  case 'home':
+     require 'app/controllers/HomeController.php';
+     $controller = new HomeController();
+  break;
+
+  case 'products':
+     require 'app/controllers/ProductController.php';
+     $controller = new ProductController();
+  break;
+
+  case 'register':
+     require 'app/controllers/RegisterController.php';
+     $controller = new RegisterController();
+  break;
+
+  case 'login':
+     require 'app/controllers/LoginController.php';
+     $controller = new LoginController();
+  break;
+
+  default:
+     echo ('Error Page ');
+  break;
+}
+
+$controller->buildHTML();
 
 
-
-
-    <!-- Slides Show Starts Here  -->
-
-              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                      <div class="item active">
-                        <div class="slider-box1">
-                          
-                        </div>
-                        <img src="assets/images/sl8.jpg" alt="image-1">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                       <div class="item ">
-                       <div class="slider-box2">
-                          
-                        </div>
-                        <img src="assets/images/sl2.jpg" alt="image-1">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                       <div class="item ">
-                       <div class="slider-box3">
-                          
-                        </div>
-                        <img src="assets/images/sl3.jpg" alt="image-1">
-                        <div class="carousel-caption">
-                         
-                        </div>
-                      </div>
-                       <div class="item ">
-                        <img src="assets/images/sl7.jpg" alt="image-1">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/sl5.jpg" alt="image-2">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                      ...
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-              </div>
-
-      
-
-    <!-- Slides show ends here  -->
-    <div class="container-fluid main-text">
-      <div class="row">
-        <div class="col-md-12 home-heading">
-          <h1>Welcome to MobileZone</h1>
-          <h5>the power you need</h5>
-          <!-- <img src="assets/images/MobileZone.png" alt="company name"> -->
-        </div>
-      </div>
-    </div>
-    <hr class="hr-style">
+?>
 
 
 
 
 
-
-    <div class="clearfix" style="margin-bottom:20px;"></div>
-
-      <div class="container-fluid hot-box">
-        <h1 class="hot-heading">Products</h1>
-        <div class="row hot-row">
-
-          <div class="col-md-4 col-sm-4 col-xs-12 hot-products">
-            <img src="assets/images/phones.jpg" alt="cat image" class="img-responsive hot-img">
-            <h2 class="p-heading">Phones</h2>
-            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12 hot-products tablets">
-            <img src="assets/images/tablets1.jpg" alt="phone products image" class="img-responsive hot-img">
-            <h2 class="p-heading tablet-h">Tablets</h2>
-            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
-          </div>
-           <div class="col-md-4 col-sm-4 col-xs-12 hot-products tablets">
-            <img src="assets/images/accessories2.jpg" alt="phone products image" class="img-responsive hot-img">
-            <h2 class="p-heading accessories-h">Accessories</h2>
-            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Clearance Sale box -->
-      <div class="container-fluid clearance">
-        <div class="row">
-            <h3>Clearance Sale</h3>
-            <h1>Save an Extra 10% </h1>
-            <ul>
-              <li><span>On Already reduced prices</span></li>
-              <li><span>Limited time only</span></li>
-              <li><span>Prices as marked</span></li>
-            </ul>
-             <button class="btn btn-warning btn-lg">
-               Buy Now
-             </button>
-        </div>
-      </div>
-
-      <!-- Clearance box ends -->
-    <!-- Marketing Starts here -->
-    <hr class="divider latest-d">
-    <!-- Products thumbnails -->
-      <h1 class="latest">Latest Products</h1>
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 col-md-3">
-              <div class="thumbnail">
-                <img src="assets/images/product-1.jpg" alt="iphone1">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="thumbnail">
-                <img src="assets/images/product-1.jpg" alt="iphone1">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="thumbnail">
-                <img src="assets/images/product-1.jpg" alt="iphone1">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="thumbnail">
-                <img src="assets/images/product-1.jpg" alt="iphone1">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-            </div>    
-        </div>
-      </div>
-
-      <div class="container-fluid news-box">
-        <div class="row news-row">
-          <h3>Get Exclusive News and Offer</h3>
-          <div>
-            <input class="form-control news-email" type="email" name="n-email" value="Enter your email address">
-          </div>
-          <button class="btn btn-default signup btn-block">Sign Up</button>
-        </div>
-        <div class="container-fluid n-trans">
-        </div>
-      </div>
-
-      <div class="container-fluid payment">
-          <span>Secure Payment:</span><img src="assets/images/payment.png">
-      </div>
-
-    <!-- end product thumbnails -->
-    <hr class="divider line-after-payment">
-
-    <footer>
-      <div class="container-fluid footer-box">
-        <div class="container col-md-5">
-          <div class="row footer-l-row">
-            <div class="col-md-6 r-l-box">
-                <h4>Shop</h4>
-                <span><a href="#">Apple</a></span>
-                <span><a href="#">Samsung</a></span>
-                <span><a href="#">Xiaomi</a></span>
-                <span><a href="#">MIcrosoft</a></span>
-                <span><a href="#">All Products</a></span>
-            </div>
-            <div class="col-md-6 r-r-box">
-                <h4>About Us</h4>
-                <span><a href="#">About Us</a></span>
-                <span><a href="#">News</a></span>
-                <span><a href="#">Sitemap</a></span>              
-            </div>
-          </div>
-        </div>
-
-         <div class="container col-md-7">
-          <div class="row footer-r-row">
-            <div class="col-md-5 r-l-box">
-                <h4>Contact Us</h4>
-                <span><a href="#">Contact</a></span>
-                <span><a href="#">Newsletter</a></span>
-            </div>
-            <div class="col-md-7 r-r-box">
-                <ul>
-                  <li><a href="#"><img src="assets/images/fb.png"></a></li>
-                  <li><a href="#"><img src="assets/images/twitter.png"></a></li>
-                  <li><a href="#"><img src="assets/images/gplus.png"></a></li>
-                  <li><a href="#"><img src="assets/images/linkedin.png"></a></li>
-                  <li><a href="#"><img src="assets/images/instagram.png"></a></li>
-                </ul>
-                <img src="assets/images/map.png">
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Marketing Ends here -->
-
-
-
-
-
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
