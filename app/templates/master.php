@@ -98,7 +98,7 @@
 
     <footer>
       <div class="container-fluid footer-box">
-        <div class="container col-md-5">
+        <div class="container col-md-6">
           <div class="row footer-l-row">
             <div class="col-md-6 r-l-box">
                 <h4>Shop</h4>
@@ -117,14 +117,14 @@
           </div>
         </div>
 
-         <div class="container col-md-7">
+         <div class="container col-md-6">
           <div class="row footer-r-row">
-            <div class="col-md-5 r-l-box">
+            <div class="col-md-6 r-l-box">
                 <h4>Contact Us</h4>
                 <span><a href="#">Contact</a></span>
                 <span><a href="#">Newsletter</a></span>
             </div>
-            <div class="col-md-7 r-r-box">
+            <div class="col-md-6 r-r-box">
                 <ul>
                   <li><a href="#"><img src="assets/images/fb.png"></a></li>
                   <li><a href="#"><img src="assets/images/twitter.png"></a></li>
