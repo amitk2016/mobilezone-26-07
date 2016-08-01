@@ -203,7 +203,69 @@
 
 	<div class="col-md-2">
 		Right side bar
-	</div>
-
+	</div>	
+</div>
+<!-- Details Modal -->
+<div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content ">
+			<div class="modal-header">
+			<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+				<span aira-hidden="true">&times;</span>
+			</button>
+			<h4 class="modal-title text-center">IPhones</h4>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="center-block">
+								<img src="assets/images/iphone6plus.jpg" alt="Iphone" class="details img-responsive">
+							</div>
+							
+						</div>
+						<div class="col-sm-6">
+							<h4>Details</h4>
+							<p>he moment you use iPhone 6s, you know you’ve never felt anything like it. With a single press, 3D Touch lets you do more than ever before</p>
+							<hr>
+							<p>
+								Price : $999
+							</p>
+							<p>Brand: Apple</p>
+							<form action="index.php?page=cart" method="post">
+								<div class="form-group">
+									<div class="col-xs-3">
+										<label for="quantity">Quantity:</label>
+										<input type="text" class="form-control" id="quantity" name="quantity">
+										<p>Avaliable: 3</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="color">Color:</label>
+									<select name="color" id="color" class="form-control">
+										<option value="White"></option>
+										<option value="Black"></option>
+										<option value="Grey"></option>
+										<option value="Gold"></option>
+									</select>
+								</div>
+							</form>
+								
+						</div>
+					</div>	
+				</div>
+				
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal">Close</button>
+				<button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button>
+			</div>
+		</div>
+	</div>	
 	
 </div>
+
+
+
+
+
