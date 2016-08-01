@@ -210,9 +210,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content ">
 			<div class="modal-header">
-			<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-				<span aira-hidden="true">&times;</span>
-			</button>
+			<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aira-hidden="true">&times;</span></button>
 			<h4 class="modal-title text-center">IPhones</h4>
 			</div>
 			<div class="modal-body">
@@ -234,20 +232,24 @@
 							<p>Brand: Apple</p>
 							<form action="index.php?page=cart" method="post">
 								<div class="form-group">
-									<div class="col-xs-3">
+									<div class="col-md-3">
 										<label for="quantity">Quantity:</label>
 										<input type="text" class="form-control" id="quantity" name="quantity">
-										<p>Avaliable: 3</p>
+										<br>
+										<p>Avaliable:3</p>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="color">Color:</label>
-									<select name="color" id="color" class="form-control">
-										<option value="White"></option>
-										<option value="Black"></option>
-										<option value="Grey"></option>
-										<option value="Gold"></option>
-									</select>
+									<div class="col-md-6">
+										<label for="color">Color:</label>
+										<select name="color" id="color" class="form-control">
+											<option value="1">White</option>
+											<option value="2">Black</option>
+											<option value="3">Grey</option>
+											<option value="4">Gold</option>
+										</select>
+
+									</div>
 								</div>
 							</form>
 								

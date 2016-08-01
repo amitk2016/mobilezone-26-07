@@ -1,10 +1,16 @@
 <?php 
 
 
-class ProductController {
+class ProductController extends PageController{
 	// Properties 
 
+	public function __construct($dbc) {
 
+		parent::__construct();
+
+		$this->dbc = $dbc;
+
+	}
 
 	// public function __construct(argument)
 	// {
