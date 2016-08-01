@@ -28,9 +28,19 @@ switch ($page) {
      $controller = new ProductController();
   break;
 
+   case 'mobile':
+     require 'app/controllers/MobileController.php';
+     $controller = new MobileController();
+  break;
+
   case 'register':
      require 'app/controllers/RegisterController.php';
      $controller = new RegisterController();
+  break;
+
+  case 'contact':
+     require 'app/controllers/ContactController.php';
+     $controller = new ContactController();
   break;
 
   case 'login':
@@ -38,8 +48,19 @@ switch ($page) {
      $controller = new LoginController();
   break;
 
+  case 'cart':
+     require 'app/controllers/CartController.php';
+     $controller = new CartController();
+  break;
+
+  case 'checkout':
+     require 'app/controllers/CheckoutController.php';
+     $controller = new CheckoutController();
+  break;
+
   default:
-     echo ('Error Page ');
+     require 'app/controllers/ErrorController.php';
+     $controller = new ErrorController();
   break;
 }
 

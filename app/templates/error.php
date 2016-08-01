@@ -1,5 +1,5 @@
  <?php 
-  $this->layout('error',[
+  $this->layout('master',[
     'title'=> "Page Not Found",
     'description'=> "Page does not exist"
     ]);

@@ -44,33 +44,33 @@
                     
 
                     <li class="dropdown">
-                        <a href="products.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
+                        <a href="index.php?page=aboutus" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
                         <ul class="dropdown-menu nav-ul">
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="index.php?page=aboutus">About Us</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Blog</a></li>                           
+                            <li><a href="index.php?page=blog">Blog</a></li>                           
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="index.php?page=faq">FAQ</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="index.php?page=products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>
                         <ul class="dropdown-menu nav-ul">
-                            <li><a href="index.php?page=products">Mobiles</a></li>
+                            <li><a href="index.php?page=mobile">Mobiles</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="index.php?page=products">Tablets</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="index.php?page=products">Accessories</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="index.php?page=contact">Contact</a></li>
                   </ul>
                  
                   <ul class="nav navbar-nav navbar-right">
-                  <li><a href="login.php">Login</a></li>
-                  <li><a href="register.php">Register</a></li>
-                   <li><a href="checkout.php">Checkout</a></li>
-                    <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                  <li><a href="index.php?page=login">Login</a></li>
+                  <li><a href="index.php?page=register">Register</a></li>
+                   <li><a href="index.php?page=checkout">Checkout</a></li>
+                    <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                     <form class="navbar-form navbar-left" role="search">
                     <div class="form-group ">
                       <input type="text" class="form-control" placeholder="Search">

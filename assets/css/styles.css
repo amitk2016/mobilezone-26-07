@@ -113,7 +113,7 @@ h1.hot-heading{
 	max-width:100%;
 }
 .tablets{
-	margin-left:30px;
+	margin-left:70px;
 }
 .tablet-h{
 	margin-top:55px;
@@ -143,7 +143,7 @@ h1.hot-heading{
 /*---Clearance Style Starts ----*/
 .clearance{
 	background-color:#e74c3c;
-	height:200px;
+	height:220px;
 	text-align: center;
 
 }
@@ -232,7 +232,8 @@ h1.hot-heading{
 .payment span{
 	font-size:18px;
 	text-transform: uppercase;
-	margin-right:30px;
+	margin-left: 80px;
+	margin-right:50px;
 	font-weight: bold;
 	/*payment style ends*/
 }
@@ -268,6 +269,18 @@ h1.hot-heading{
 /*----------------------------------Productpage styles Ends -------------------------------------------*/
 
 
+
+/*----------------------------------Mobilepage styles Starts -------------------------------------------*/
+
+.mobile-box{
+	padding-top:100px;
+}
+
+
+
+
+
+/*----------------------------------Mobilepage styles Ends -------------------------------------------*/
 
 
 /*----------------------------------Checkoutpage styles Starts -------------------------------------------*/
@@ -515,7 +528,7 @@ ul.phone-mail {
 #error h1{
 	color:#34495e ;
 	font-size:120px;
-	margin:0;
+	margin-top: 0;
 }
 #error h2{
 	color:#34495e ;
@@ -524,9 +537,11 @@ ul.phone-mail {
 }
 #error p{
 	font-size:20px;
-	margin:0;
+	margin-bottom: 30px;
 }
-
+#error a{
+	color:white;
+}
 
 
 /*---------------------------------Error page ends here------------------------------------------------*/
