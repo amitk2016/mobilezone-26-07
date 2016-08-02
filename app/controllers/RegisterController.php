@@ -56,7 +56,13 @@ class RegisterController extends PageController{
 
 		$plates = new League\Plates\Engine('app/templates');
 
+		// prepare a continer for data 
+		$data = [];
 
+		// if there is an fname error
+		if ($this->fnameMessage ) {
+			# code...
+		}
 		echo $plates->render('register');
 	}
 
