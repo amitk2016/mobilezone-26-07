@@ -8,7 +8,9 @@ require 'app/controllers/PageController.php';
 
 
 // Connect to the database
-$dbc = new mysqli('localhost', 'root', '', 'mobile_zone');
+$dbc = new mysqli('localhost','root', '','mobile_zone'); //FOUR THINGS IN THE BRACKET IS ('location', 'user', 'password' , 'database name' )
+
+
 
 // Check connection
 // if ($dbc->connect_error) {

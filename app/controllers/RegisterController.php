@@ -4,11 +4,12 @@
 class RegisterController extends PageController{
 
 	// Properties 
-	private $fnameMessage;
+	private $fnameMessage;	
 	private $lnameMessage;
 	private $emailMessage;
 	private $passwordMessage;
 	private $confirmMessage;
+	private $db;
 
 
 
@@ -18,7 +19,8 @@ class RegisterController extends PageController{
 
 		parent::__construct();
 
-		$this->dbc = $dbc;
+		// save the database conncetion 
+		$this->db = $dbc;
 
 		// if the user has submitted the registration form 
 
@@ -113,17 +115,73 @@ class RegisterController extends PageController{
 		if ( $_POST['email'] == '') {
 			// Email is invalid 
 			$this->emailMessage = 'Invalid Email';
+			$totalError++;
 		}
+		$filteredEmail = $this->db->real_escape_string( $_POST['email'] );
+
+		$sql = "SELECT email 
+				FROM users
+				WHERE email = '$filteredEmail' ";
+
+		//Run the query 
+		$result = $this->db->query($sql);
+
+		// if the query failed or there is a result 
+		if ( $result == 'null' || $result->num_rows > 0 ) {
+			$this->emailMessage = 'Email is in use';
+			$totalError++;
+		}		
+
+		//make sure email is not in use
+		
+
 		// password length should be more than 8 character 
 		if ( strlen($_POST['password']) < 8 ) {
 			// password length too short 
 			$this->passwordMessage = 'Must be atleast 8 character';
+			$totalError++;
 		}
 		if ( $_POST['confirm-password'] == '' || $_POST['confirm-password'] !== $_POST['password'] ) {
 			
 			$this->confirmMessage = 'Must be same as above password';
+			$totalError++;
 		}
+		//if there is no errors 
+		if ( $totalError == 0 ) {
+			
 
+			// Validation Passed 
+
+
+
+			// filter user data for query 
+			$filteredfName = $this->db->real_escape_string( $_POST['fname'] );
+			$filteredlName = $this->db->real_escape_string( $_POST['lname'] );
+			
+
+			// Hash the password 
+
+			$hash = password_hash( $_POST['password'] , PASSWORD_BCRYPT );
+
+			$confirmHash = password_hash( $_POST['confirm-password'] , PASSWORD_BCRYPT );
+
+			// Prepare the Sql 
+			$sql = "INSERT INTO users (first_name,last_name,email,password,confirm_password)
+					VALUES ('$filteredfName','$filteredlName','$filteredEmail','$hash','$confirmHash')";
+
+			//Run the query 
+			$this->db->query($sql);
+
+			// Check to make sure if query worked 
+
+
+			// Log the user in
+
+
+			// Redirect the user to homepage 
+
+			header('Location: index.php?page=home');
+		}
 
 	}
 

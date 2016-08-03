@@ -17,14 +17,14 @@
 						<div class="row">
 							<div class="col-md-6 form-group">
 								<label for="exampleInputFirstName">First Name</label>
-								<input type="text" class="form-control" id="firstName" placeholder="First" name="fname">
+								<input type="text" class="form-control" id="firstName" placeholder="First" name="fname" value="<?= isset($_POST['fname']) ? $_POST['fname'] : ''?>">
 								<?php if ( isset($fMessage) ) : ?>		
 									<p><?= $fMessage ?></p>
 								<?php endif; ?>
 							</div>
 							<div class="col-md-6 form-group">
 								<label for="exampleInputFirstName">Last Name</label>	
-								<input type="text" class="form-control" id="LastName" placeholder="Last" name="lname">
+								<input type="text" class="form-control" id="LastName" placeholder="Last" name="lname" value="<?= isset($_POST['lname']) ? $_POST['lname'] : ''?>">
 								<?php if ( isset($lMessage) ) : ?>		
 									<p><?= $lMessage ?></p>
 								<?php endif; ?>
@@ -32,7 +32,7 @@
 						</div>
 						<div class="form-group">
 		    				<label for="exampleInputEmail1">Email address</label>
-		    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+		    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : ''?>">
 		    				<?php if ( isset($eMessage) ) :?>
 		    					<span><?=$eMessage?></span>
 		    				<?php endif; ?>
