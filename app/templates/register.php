@@ -18,6 +18,9 @@
 							<div class="col-md-6 form-group">
 								<label for="exampleInputFirstName">First Name</label>
 								<input type="text" class="form-control" id="firstName" placeholder="First" name="fname">
+								<?php if ( isset($fnameMessage) ) : ?>		
+									<p><?= $fnameMessage ?></p>
+								<?php endif; ?>
 							</div>
 							<div class="col-md-6 form-group">
 								<label for="exampleInputFirstName">Last Name</label>	

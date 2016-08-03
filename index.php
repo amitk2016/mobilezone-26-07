@@ -18,13 +18,15 @@ $dbc = new mysqli('localhost', 'root', '', 'mobile_zone');
 
 //if user has requested a page 
 
-if ( isset($_GET['page']) ) {
+// if ( isset($_GET['page']) ) {
   
-  $page = $_GET['page'];
-}else{
+//   $page = $_GET['page'];
+// }else{
 
-  $page = 'home';
-}
+//   $page = 'home';
+// }
+
+$page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 switch ($page) {
   case 'home':

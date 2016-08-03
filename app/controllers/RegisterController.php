@@ -60,10 +60,12 @@ class RegisterController extends PageController{
 		$data = [];
 
 		// if there is an fname error
-		if ($this->fnameMessage ) {
-			# code...
+		if ($this->fnameMessage != '') {
+			
+			$data['fnameMessage'] = $this->fnameMessage;
+			
 		}
-		echo $plates->render('register');
+		echo $plates->render('register',$data);
 	}
 
 	private function validateRegistrationForm(){
