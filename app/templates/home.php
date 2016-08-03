@@ -102,7 +102,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12 hot-products">
             <img src="assets/images/phones.jpg" alt="cat image" class="img-responsive hot-img">
             <h2 class="p-heading">Phones</h2>
-            <a href="index.php?page=products" class="btn btn-primary btn-lg">Shop Now</a>
+            <a href="index.php?page=mobile" class="btn btn-primary btn-lg">Shop Now</a>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 hot-products tablets">
             <img src="assets/images/tablets1.jpg" alt="phone products image" class="img-responsive hot-img">

@@ -113,7 +113,7 @@ h1.hot-heading{
 	max-width:100%;
 }
 .tablets{
-	margin-left:70px;
+	margin-left:50px;
 }
 .tablet-h{
 	margin-top:55px;
@@ -232,8 +232,8 @@ h1.hot-heading{
 .payment span{
 	font-size:18px;
 	text-transform: uppercase;
-	margin-left: 80px;
-	margin-right:50px;
+	margin-left:50px;
+	margin-right:30px;
 	font-weight: bold;
 	/*payment style ends*/
 }
