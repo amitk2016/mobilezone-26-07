@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 
 // require all the third party app 
 require 'vendor/autoload.php';

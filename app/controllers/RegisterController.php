@@ -127,11 +127,11 @@ class RegisterController extends PageController{
 		$result = $this->db->query($sql);
 
 		// if the query failed or there is a result 
-		if ( $result == 'null' || $result->num_rows > 0 ) {
+		if ( !$result || $result->num_rows > 0 ) {
 			$this->emailMessage = 'Email is in use';
 			$totalError++;
 		}		
-
+		
 		//make sure email is not in use
 		
 
@@ -176,7 +176,8 @@ class RegisterController extends PageController{
 
 
 			// Log the user in
-
+			$_SESSION['id'] = $this->db->insert_id;
+			echo $_SESSION['id'];
 
 			// Redirect the user to homepage 
 
