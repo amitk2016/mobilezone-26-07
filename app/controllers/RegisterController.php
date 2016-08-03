@@ -5,7 +5,10 @@ class RegisterController extends PageController{
 
 	// Properties 
 	private $fnameMessage;
-
+	private $lnameMessage;
+	private $emailMessage;
+	private $passwordMessage;
+	private $confirmMessage;
 
 
 
@@ -22,6 +25,7 @@ class RegisterController extends PageController{
 		if ( isset ($_POST['new-account']) ) {
 				
 		  	$this->validateRegistrationForm();
+		  	
 		}
 
 
@@ -62,22 +66,65 @@ class RegisterController extends PageController{
 		// if there is an fname error
 		if ($this->fnameMessage != '') {
 			
-			$data['fnameMessage'] = $this->fnameMessage;
-			
+			$data['fMessage'] = $this->fnameMessage;
+
 		}
+		//if there is an last name error
+
+		if ($this->lnameMessage != '') {
+			
+			$data['lMessage'] = $this->lnameMessage;
+		}
+
+		if ($this->emailMessage != '') {
+			$data['eMessage'] = $this->emailMessage;
+		}
+
+		if ( $this->passwordMessage != '') {
+			
+			$data['pMessage'] = $this->passwordMessage;
+		}
+
+		if ( $this->confirmMessage != '') {
+			$data['cMessage'] = $this->confirmMessage;
+		}
+
 		echo $plates->render('register',$data);
 	}
 
+
+
+
 	private function validateRegistrationForm(){
 
-		// Make sure the Email has been provided and its valid
+		$totalError = 0;
+		// Make sure first name is provided
 		if ( $_POST['fname'] == '') {
-			
 			// first name is not filled 
-			$this->fnameMessage = 'Must Enter the First Name';
-
-
+			$this->fnameMessage = 'Must Enter your First Name';
+			$totalError++;
 		}
+		if ( $_POST['lname'] == '') {
+			//last name not privided 
+			$this->lnameMessage = 'Must Enter your Last Name';
+			$totalError++;
+		}
+		// Make sure the Email has been provided and its valid
+		if ( $_POST['email'] == '') {
+			// Email is invalid 
+			$this->emailMessage = 'Invalid Email';
+		}
+		// password length should be more than 8 character 
+		if ( strlen($_POST['password']) < 8 ) {
+			// password length too short 
+			$this->passwordMessage = 'Must be atleast 8 character';
+		}
+		if ( $_POST['confirm-password'] == '' || $_POST['confirm-password'] !== $_POST['password'] ) {
+			
+			$this->confirmMessage = 'Must be same as above password';
+		}
+
+
 	}
 
 
