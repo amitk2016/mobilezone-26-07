@@ -11,21 +11,15 @@ require 'app/controllers/PageController.php';
 // Connect to the database
 $dbc = new mysqli('localhost','root', '','mobile_zone'); //FOUR THINGS IN THE BRACKET IS ('location', 'user', 'password' , 'database name' )
 
-
-
 // Check connection
 // if ($dbc->connect_error) {
 //     die("Connection failed: " . $dbc->connect_error);
 // } 
 // echo "Connected successfully";
-
 //if user has requested a page 
-
-// if ( isset($_GET['page']) ) {
-  
+// if ( isset($_GET['page']) ) {  
 //   $page = $_GET['page'];
 // }else{
-
 //   $page = 'home';
 // }
 

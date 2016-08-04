@@ -5,7 +5,7 @@ abstract class PageController
 	//Properties 
 	protected $title;
 	protected $description; 
-	protected $dbc;
+	protected $db;
 	protected $plates;
 	protected $data = [];
 

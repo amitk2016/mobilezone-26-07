@@ -1,15 +1,19 @@
 <?php
 
-/**
-* 
-*/
 class HomeController extends PageController{
 	// Properties 
+
+
+
+
+
+
+	//Methods 
 	public function __construct($dbc) {
 
 		parent::__construct();
 
-		$this->dbc = $dbc;
+		$this->db = $dbc;
 
 	}
 

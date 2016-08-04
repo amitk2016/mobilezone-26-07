@@ -9,7 +9,7 @@ class RegisterController extends PageController{
 	private $emailMessage;
 	private $passwordMessage;
 	private $confirmMessage;
-	private $db;
+	
 
 
 
@@ -17,6 +17,7 @@ class RegisterController extends PageController{
 	// Methods ( Functions )
 	public function __construct($dbc) {
 
+		//PageController page constructor(which is a parent construct) runs also with this line
 		parent::__construct();
 
 		// save the database conncetion 
@@ -37,21 +38,13 @@ class RegisterController extends PageController{
 
 	// validate the user's data
 
-
 	// Check the database to see if email is in use 
-
 
 	// Check the strength of the password 
 
-
-
 	// register the account or show error message 
 
-
-
 	// if sucessful,log user in and redirect to the homepage 
-
-
 
 
 	}
@@ -59,7 +52,6 @@ class RegisterController extends PageController{
 	public function buildHTML(){
 
 		//create instance of plates library 
-
 		$plates = new League\Plates\Engine('app/templates');
 
 		// prepare a continer for data 
@@ -178,7 +170,6 @@ class RegisterController extends PageController{
 			// Log the user in
 			$_SESSION['id'] = $this->db->insert_id;
 			echo $_SESSION['id'];
-
 			// Redirect the user to homepage 
 
 			header('Location: index.php?page=home');
