@@ -51,8 +51,6 @@ class RegisterController extends PageController{
 
 	public function buildHTML(){
 
-		//create instance of plates library 
-		$plates = new League\Plates\Engine('app/templates');
 
 		// prepare a continer for data 
 		$data = [];
@@ -83,7 +81,7 @@ class RegisterController extends PageController{
 			$data['cMessage'] = $this->confirmMessage;
 		}
 
-		echo $plates->render('register',$data);
+		echo $this->plates->render('register',$data);
 	}
 
 
