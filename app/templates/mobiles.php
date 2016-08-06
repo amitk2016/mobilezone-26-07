@@ -18,15 +18,19 @@
 	<div class="col-md-8">
 		<div class="row">
 			<h2 class="text-center">Mobile Products</h2>
-			<div class="col-md-3">
-				<h4>IPhones</h4>
-				<img src="assets/images/iphone5.jpg" alt="iphone5" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
+
+			<?php foreach ($allProducts as $product):?>
+				<div class="col-md-3">
+					<h4>IPhones</h4>
+					<img src="assets/images/iphone5.jpg" alt="iphone5" />
+					<p class="list-price text-danger">List Prices <s>$999</s></p>
+					<p class="price">Our Price : $900</p>
+					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
+						Details
+					</button>
+				</div>
+			<?php endforeach ?>
+<!-- 
 			<div class="col-md-3">
 				<h4>IPhones</h4>
 				<img src="assets/images/iphone5.jpg" alt="iphone5" />
@@ -197,7 +201,7 @@
 				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
 					Details
 				</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 

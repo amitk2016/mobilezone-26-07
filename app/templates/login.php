@@ -12,16 +12,26 @@
 		<div class="panel panel-primary">
 				<div class="panel-heading rg-heading">Login</div>
 					<div class="panel-body">
-						<form>
+						<form action="index.php?page=login" method="post" >
 						  <div class="form-group">
 						    <label for="exampleInputEmail1">Email address</label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						    <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email" value="<?= isset($_POST['login']) ? $_POST['email'] : ''?>">
+						    <?php if ( isset ($emailMessage) ): ?> 
+						    	<p><?= $emailMessage?></p>
+						    <?php endif ?>
 						  </div>
 						  <div class="form-group">
 						    <label for="exampleInputPassword1">Password</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+						    <?php if ( isset ($passwordMessage) ): ?> 
+						    	<p><?= $passwordMessage?></p>
+						    <?php endif ?>
+						    <br>
+						    <?php if ( isset ($loginMessage) ): ?> 
+						    	<p><?= $loginMessage?></p>
+						    <?php endif ?>
 						  </div>
-						  <button type="submit" class="btn btn-default btn-block btn-reg btn-success">Submit</button>
+						  <button type="submit" name="login" class="btn btn-default btn-block btn-reg btn-success">Submit</button>
 							  <ul class="remember-me">
 							  	<li>
 							  		<label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember me</label>

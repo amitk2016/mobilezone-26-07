@@ -7,7 +7,7 @@ class MobileController extends PageController {
 
 		parent::__construct();
 
-		$this->dbc = $dbc;
+		$this->db = $dbc;
 
 	}
 
@@ -19,14 +19,35 @@ class MobileController extends PageController {
 
 	public function buildHTML(){
 
-		//create instance of plates library 
+		//Get the products from database 
+		$this->getMobileProducts();
 
-		$plates = new League\Plates\Engine('app/templates');
 
-
-		echo $plates->render('mobiles');
+		echo $this->plates->render('mobiles');
 	}
 
+	private function getMobileProducts(){
+
+		//Prepare some sql
+		$sql = "SELECT * 
+				FROM mobiles";
+
+		// Run the Sql and capture the result 
+
+		$result = $this->db->query($sql);
+
+		// Extract the results as an array 
+		$allProducts = $result->fetch_all(MYSQLI_ASSOC);
+
+		echo'<pre>';
+		print_r($allProducts);
+		echo'</pre>';
+		die();
+		// return the results to the code that called this function
+
+
+
+	}
 
 
 }
