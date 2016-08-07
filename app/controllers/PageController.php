@@ -17,6 +17,16 @@ abstract class PageController
 
 	}
 
+	public function mustBeLoggedIn(){
+
+		//if you are not logged in 
+		if ( !isset($_SESSION['id']) ) {
+
+		//Redirect the user to login page
+			header('Location: index.php?page=login');
+
+		}
+	}
 
 	abstract public function buildHTML();
 }
