@@ -48,7 +48,7 @@
                         <ul class="dropdown-menu nav-ul">
                             <li><a href="index.php?page=aboutus">About Us</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="index.php?page=blog">Blog</a></li>                           
+                            <li><a href="index.php?page=blogs">Blogs</a></li>                           
                             <li role="separator" class="divider"></li>
                             <li><a href="index.php?page=faq">FAQ</a></li>
                         </ul>
@@ -67,9 +67,10 @@
                   </ul>
                  
                   <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
                   <li><a href="index.php?page=login">Login</a></li>
                   <li><a href="index.php?page=register">Register</a></li>
-                   <li><a href="index.php?page=checkout">Checkout</a></li>
+                   <li><a href="index.php?page=logout">Logout</a></li>
                     <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                     <form class="navbar-form navbar-left" role="search">
                     <div class="form-group ">

@@ -71,6 +71,19 @@ switch ($page) {
      $controller = new UsersController($dbc);
   break;
 
+  case 'blogs':
+     require 'app/controllers/BlogController.php';
+     $controller = new BlogController($dbc);
+  break;
+
+  case 'logout':
+      unset($_SESSION['id']);
+      unset($_SESSION['privilege']);
+      header('Location: index.php');
+  break;
+  
+
+
   default:
      require 'app/controllers/ErrorController.php';
      $controller = new ErrorController();

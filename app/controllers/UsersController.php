@@ -76,7 +76,7 @@ class UsersController extends PageController
 		if ( strlen( $desc ) == 0 ) {
 			$this->data['descMessage'] = '<p>Required</p>';
 			$totalErrors++;
-		}elseif (strlen( $desc ) > 100 ) {
+		}elseif (strlen( $desc ) > 1000 ) {
 			$this->data['descMessage'] = '<p>Can not be more than 1000 characters</p>';
 			$totalErrors;
 		}
@@ -94,10 +94,12 @@ class UsersController extends PageController
 
 			$this->db->query($sql);
 			
-			print_r($sql);
-			die();
+			
 			//Make sure it worked
-
+			if ($this->db->affected_rows) {
+				$this->data['postMessage'] = 'Your Blog Has been Successfully Posted!' ; 
+			}else
+				$this->data['postMessage'] = 'Something Went Wrong';
 			// Sucess message ! or error message
 
 			//

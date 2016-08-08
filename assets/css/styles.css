@@ -301,6 +301,9 @@ h1.hot-heading{
 .checkout-box{
 	padding-top:100px;
 }
+.cart-box{
+	padding-top:100px;
+}
 
 
 
@@ -308,12 +311,17 @@ h1.hot-heading{
 
 /*----------------------------------Cartpage styles Ends -------------------------------------------*/
 
-.cart-box{
-	padding-top:100px;
+/*----------------------------------Blogpage styles Starts -------------------------------------------*/
+.blog-box{
+	padding-top: 100px;
+}
+.blog-box h1{
+	margin-bottom:50px;
 }
 
 
 
+/*----------------------------------Blogpage styles Ends -------------------------------------------*/
 
 
 
@@ -375,7 +383,9 @@ h5{
 	width:400px;
 	margin:auto;
 }
-
+.update-form span{
+	color:red;
+}
 
 
 /*-- ------------------Update style ends here ---------------------------------------------------- --*/

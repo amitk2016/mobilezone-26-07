@@ -50,5 +50,6 @@
      <?= isset($fileMessage) ?$fileMessage : '' ?>
    </div>
    <button type="submit" name="new-blog" class="btn btn-warning">Submit</button>
+   <span><?= isset($postMessage) ?$postMessage : '' ?></span>
 
 </form>

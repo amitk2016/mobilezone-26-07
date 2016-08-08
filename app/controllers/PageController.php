@@ -21,7 +21,6 @@ abstract class PageController
 
 		//if you are not logged in 
 		if ( !isset($_SESSION['id']) ) {
-
 		//Redirect the user to login page
 			header('Location: index.php?page=login');
 

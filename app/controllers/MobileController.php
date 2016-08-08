@@ -9,6 +9,8 @@ class MobileController extends PageController {
 
 		$this->db = $dbc;
 
+		
+
 	}
 
 
@@ -20,10 +22,14 @@ class MobileController extends PageController {
 	public function buildHTML(){
 
 		//Get the products from database 
-		$this->getMobileProducts();
+		$allProducts = $this->getMobileProducts();
+
+		$data = [];
+
+		$data['allProducts'] = $allProducts;
 
 
-		echo $this->plates->render('mobiles');
+		echo $this->plates->render('mobiles', $data);
 	}
 
 	private function getMobileProducts(){
@@ -38,11 +44,12 @@ class MobileController extends PageController {
 
 		// Extract the results as an array 
 		$allProducts = $result->fetch_all(MYSQLI_ASSOC);
+		// die($allProducts);
 
-		echo'<pre>';
-		print_r($allProducts);
-		echo'</pre>';
-		die();
+		return $allProducts;
+
+		
+		
 		// return the results to the code that called this function
 
 
