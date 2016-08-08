@@ -49,7 +49,7 @@ hr{
 
 /*---Navbar style ends here-----*/
 .main-text{
-	background-image: url(../assets/images/1.jpg);	
+	background-image: url(../assets/images/1.jpg);
 	background-color:#f0cc56;
 	display: table;
 	width: 100vw;
@@ -67,7 +67,7 @@ hr{
 	font-size:40px;
 	letter-spacing:2px;
 	text-shadow: 1.5px 1.5px #000;
-	
+
 }
 .home-heading h5{
 	text-transform:uppercase;
@@ -100,7 +100,7 @@ h1.hot-heading{
 }
 .p-heading{
 	text-align: center;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 }
 .hot-box{
 	/*background-color:green;*/
@@ -337,7 +337,7 @@ h1.hot-heading{
 	background-color:#585858;
 	height:100vh;
 	position: relative;
-	
+
 }
 /*----------------------------------Registration form styles Ends -------------------------------------------*/
 
@@ -367,6 +367,19 @@ h5{
 }
 
 /*----------------------------------login form styles Ends -------------------------------------------*/
+
+
+/*-- ------------------Update for style starts here ---------------------------------------------------- --*/
+.update-form{
+	padding-top: 100px;
+	width:400px;
+	margin:auto;
+}
+
+
+
+/*-- ------------------Update style ends here ---------------------------------------------------- --*/
+
 
 /*-- ------------------contact style starts here ---------------------------------------------------- --*/
 .mail h3:before{
@@ -496,10 +509,10 @@ ul.phone-mail {
 	margin-bottom:25px;
 }
 .footer-l-row{
-	
+
 }
 .footer-r-row{
-	
+
 }
 .r-r-box ul li a img{
 	width:30px;
@@ -545,12 +558,3 @@ ul.phone-mail {
 
 
 /*---------------------------------Error page ends here------------------------------------------------*/
-
-
-
-
-
-
-
-
-

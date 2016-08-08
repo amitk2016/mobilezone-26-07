@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 session_start();
 
-// require all the third party app 
+// require all the third party app
 require 'vendor/autoload.php';
 require 'app/controllers/PageController.php';
 
@@ -14,10 +14,10 @@ $dbc = new mysqli('localhost','root', '','mobile_zone'); //FOUR THINGS IN THE BR
 // Check connection
 // if ($dbc->connect_error) {
 //     die("Connection failed: " . $dbc->connect_error);
-// } 
+// }
 // echo "Connected successfully";
-//if user has requested a page 
-// if ( isset($_GET['page']) ) {  
+//if user has requested a page
+// if ( isset($_GET['page']) ) {
 //   $page = $_GET['page'];
 // }else{
 //   $page = 'home';
@@ -66,6 +66,11 @@ switch ($page) {
      $controller = new CheckoutController($dbc);
   break;
 
+  case 'users':
+     require 'app/controllers/UsersController.php';
+     $controller = new UsersController($dbc);
+  break;
+
   default:
      require 'app/controllers/ErrorController.php';
      $controller = new ErrorController();
@@ -76,8 +81,3 @@ $controller->buildHTML();
 
 
 ?>
-
-
-
-
-
