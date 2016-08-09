@@ -1,4 +1,4 @@
- <?php 
+ <?php
   $this->layout('master',[
     'title'=> "Mobile Phones",
     'description'=> "Latest Mobile Phones"
@@ -12,26 +12,24 @@
 <div class="container-fluid mobile-box">
 	<!-- Left sidebar -->
 	<div class="col-md-2">
-	Left side bar 
+	Left side bar
 	</div>
 	<!-- Main content  -->
 	<div class="col-md-8">
 		<div class="row">
 			<h2 class="text-center">Mobile Products</h2>
 
-			
+        <?php foreach($allProducts as $product): ?>
 				<div class="col-md-3">
-					<h4>IPhones</h4>
-					<img src="assets/images/iphone5.jpg" alt="iphone5" />
-					<p class="list-price text-danger">List Prices <s>$999</s></p>
-					<p class="price">Our Price : $900</p>
-					<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-						Details
-					</button>
+					<h4><?=htmlentities($product['title'])?></h4>
+					<img src="<?=htmlentities($product['image'])?>" alt="iphone5" />
+					<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
+					<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
+          <a href="index.php?page=products" class="btn btn-primary btn-sm active" role="button">Details</a>
 				</div>
-			
+        <?php endforeach ?>
 
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<h4>IPhones</h4>
 				<img src="assets/images/iphone5.jpg" alt="iphone5" />
 				<p class="list-price text-danger">List Prices <s>$999</s></p>
@@ -201,13 +199,13 @@
 				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
 					Details
 				</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
 	<div class="col-md-2">
 		Right side bar
-	</div>	
+	</div>
 </div>
 <!-- Details Modal -->
 <div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
@@ -224,7 +222,7 @@
 							<div class="center-block">
 								<img src="assets/images/iphone6plus.jpg" alt="Iphone" class="details img-responsive">
 							</div>
-							
+
 						</div>
 						<div class="col-sm-6">
 							<h4>Details</h4>
@@ -256,22 +254,17 @@
 									</div>
 								</div>
 							</form>
-								
+
 						</div>
-					</div>	
+					</div>
 				</div>
-				
+
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-default" data-dismiss="modal">Close</button>
 				<button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button>
 			</div>
 		</div>
-	</div>	
-	
+	</div>
+
 </div>
-
-
-
-
-

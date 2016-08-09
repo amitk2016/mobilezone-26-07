@@ -1,16 +1,13 @@
-<?php 
+<?php
 
 
 class MobileController extends PageController {
-	// Properties 
+	// Properties
 	public function __construct($dbc) {
 
 		parent::__construct();
 
 		$this->db = $dbc;
-
-		
-
 	}
 
 
@@ -21,7 +18,7 @@ class MobileController extends PageController {
 
 	public function buildHTML(){
 
-		//Get the products from database 
+		//Get the products from database
 		$allProducts = $this->getMobileProducts();
 
 		$data = [];
@@ -35,21 +32,21 @@ class MobileController extends PageController {
 	private function getMobileProducts(){
 
 		//Prepare some sql
-		$sql = "SELECT * 
+		$sql = "SELECT *
 				FROM mobiles";
 
-		// Run the Sql and capture the result 
+		// Run the Sql and capture the result
 
 		$result = $this->db->query($sql);
 
-		// Extract the results as an array 
+		// Extract the results as an array
 		$allProducts = $result->fetch_all(MYSQLI_ASSOC);
 		// die($allProducts);
 
 		return $allProducts;
 
-		
-		
+
+
 		// return the results to the code that called this function
 
 
