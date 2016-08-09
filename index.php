@@ -76,6 +76,11 @@ switch ($page) {
      $controller = new BlogController($dbc);
   break;
 
+  case 'adminproducts':
+     require 'app/controllers/AdminController.php';
+     $controller = new AdminController($dbc);
+  break;
+
   case 'logout':
       unset($_SESSION['id']);
       unset($_SESSION['privilege']);

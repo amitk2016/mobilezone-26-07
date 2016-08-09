@@ -66,19 +66,28 @@
                     <li><a href="index.php?page=contact">Contact</a></li>
                   </ul>
                  
+
                   <ul class="nav navbar-nav navbar-right">
-                  <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
-                  <li><a href="index.php?page=login">Login</a></li>
-                  <li><a href="index.php?page=register">Register</a></li>
-                   <li><a href="index.php?page=logout">Logout</a></li>
-                    <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                    <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group ">
-                      <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                  </form>
-                      </ul>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu nav-ul">
+                            <li><a href="index.php?page=adminproducts">Products</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="index.php?page=products">Users</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="index.php?page=users">Users</a></li>
+                        <li><a href="index.php?page=login">Login</a></li>
+                        <li><a href="index.php?page=register">Register</a></li>
+                         <li><a href="index.php?page=logout">Logout</a></li>
+                          <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                          <form class="navbar-form navbar-left" role="search">
+                          <div class="form-group ">
+                            <input type="text" class="form-control" placeholder="Search">
+                          </div>
+                          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                  </ul>
                     </li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
