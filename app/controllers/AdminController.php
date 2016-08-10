@@ -4,6 +4,7 @@ use Intervention\Image\ImageManager;
 
 class AdminController extends PageController
 {
+		private $acceptableImageTypes = ['image/jpeg','image/png','image/gif','image/bmp','image/tiff'];
 		public function __construct($dbc){
 			parent::__construct();
 
@@ -76,6 +77,17 @@ class AdminController extends PageController
 			$this->data['descMessage'] = '<p>Can not be more than 1000 characters</p>';
 			$totalErrors;
 		}
+		// Image field validation 
+		if ( in_array( $_FILES['image']['error'],[1,3,4] ) ) {
+			
+			// Show error message 
+			$this->data['imageMessage'] = 'Image failed to upload';
+			$totalErrors++;
+		}elseif( !in_array( $_FILES['image']['type'],$this->acceptableImageTypes ) ){
+			$this->data['imageMessage'] = 'Must be an image type (jpg,gif,png,tiff etc)';
+			$totalErrors++;
+		}
+
 
 		if ($totalErrors == 0 ) {
 			// Instance of intervention image library
@@ -84,11 +96,19 @@ class AdminController extends PageController
 			//get the file which has been just uploaded
 			$image = $manager->make($_FILES['image']['tmp_name']);
 
-			$image->save('assets/images/uploads/original/test.jpg');
+			$fileExtension = $this->getFileExtension( $image->mime() );
 
-			echo "<pre>";
-			print_r($_FILES);
-			die();
+			$fileName = uniqid();
+
+			$image->save("assets/images/uploads/original/{$fileName}{$fileExtension}");
+
+			$image->resize(200, null, function ($constraint) {
+				    $constraint->aspectRatio();
+			});
+
+			$image->save("assets/images/uploads/products/{$fileName}{$fileExtension}");
+
+
 			// filter the data
 			$title = $this->db->real_escape_string($title);
 			$desc = $this->db->real_escape_string($desc);
@@ -96,8 +116,8 @@ class AdminController extends PageController
 			// Get the id of logged in user
 			$userID = $_SESSION['id'];
 			//SQL
-			$sql = "INSERT INTO mobiles(title,price,list_price,brand,categories,description)
-							VALUES ('$title',$price,$list_price,'$brand','$categories','$desc')";
+			$sql = "INSERT INTO mobiles(title,price,list_price,brand,categories,description,image)
+							VALUES ('$title',$price,$list_price,'$brand','$categories','$desc','$fileName$fileExtension')";
 
 			$this->db->query($sql);
 
@@ -105,8 +125,9 @@ class AdminController extends PageController
 			//Make sure it worked
 			if ($this->db->affected_rows) {
 				$this->data['postMessage'] = 'Product Has been Successfully Added!' ;
-			}else
+			}else {
 				$this->data['postMessage'] = 'Something Went Wrong';
+			}
 			// Sucess message ! or error message
 
 			//
@@ -115,7 +136,28 @@ class AdminController extends PageController
 
 	}
 
+	private function getFileExtension($mimeType){
 
+		switch($mimeType){
+			case 'image/png':
+				return '.png';
+			break;
+			case 'image/gif':
+				return '.gif';
+			break;
+			case 'image/jpeg':
+				return '.jpg';
+			break;
+			case 'image/bmp':
+				return '.bmp';
+			break;
+			case 'image/tif':
+				return '.tif';
+			break;
+
+		}
+
+	}
 
 
 

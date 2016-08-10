@@ -22,7 +22,7 @@
         <?php foreach($allProducts as $product): ?>
 				<div class="col-md-3">
 					<h4><?=htmlentities($product['title'])?></h4>
-					<img src="<?=htmlentities($product['image'])?>" alt="iphone5" />
+					<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
 					<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
 					<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
           <a href="index.php?page=products" class="btn btn-primary btn-sm active" role="button">Details</a>
