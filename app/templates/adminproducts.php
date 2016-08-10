@@ -54,11 +54,11 @@
    </div>
    <div class="form-group">
      <label for="image">Image:</label>
-     <input type="file" name="image[]" id="image" multiple>
+     <input type="file" name="image" id="image">
      <p class="help-block">Upload image</p>
      <?= isset($fileMessage) ?$fileMessage : '' ?>
    </div>
    <button type="submit" name="admin-new-product" class="btn btn-block btn-success">Submit</button>
-   <span><?= isset($postMessage) ?$postMessage : '' ?></span>
+   <?= isset($postMessage) ?$postMessage : '' ?>
 
 </form>

@@ -1,8 +1,9 @@
 <?php
 
+use Intervention\Image\ImageManager;
+
 class AdminController extends PageController
 {
-
 		public function __construct($dbc){
 			parent::__construct();
 
@@ -21,8 +22,6 @@ class AdminController extends PageController
 			}
 		}
 
-
-
 	public function buildHTML(){
 
 		echo $this->plates->render('adminproducts',$this->data);
@@ -30,6 +29,9 @@ class AdminController extends PageController
 
 	private function processNewProducts(){
 		$totalErrors = 0;
+
+
+
 
 		$title = trim($_POST['title']);
 		$desc = trim($_POST['desc']);
@@ -74,8 +76,19 @@ class AdminController extends PageController
 			$this->data['descMessage'] = '<p>Can not be more than 1000 characters</p>';
 			$totalErrors;
 		}
-		if ($totalErrors == 0 ) {
 
+		if ($totalErrors == 0 ) {
+			// Instance of intervention image library
+			$manager = new ImageManager();
+
+			//get the file which has been just uploaded
+			$image = $manager->make($_FILES['image']['tmp_name']);
+
+			$image->save('assets/images/uploads/original/test.jpg');
+
+			echo "<pre>";
+			print_r($_FILES);
+			die();
 			// filter the data
 			$title = $this->db->real_escape_string($title);
 			$desc = $this->db->real_escape_string($desc);
@@ -88,7 +101,7 @@ class AdminController extends PageController
 
 			$this->db->query($sql);
 
-			
+
 			//Make sure it worked
 			if ($this->db->affected_rows) {
 				$this->data['postMessage'] = 'Product Has been Successfully Added!' ;
