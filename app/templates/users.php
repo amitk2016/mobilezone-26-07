@@ -28,6 +28,7 @@
   </div>
 
   <button type="submit" class="btn btn-success" name="update-contact" >Update Info</button>
+  <span><?= isset($postMessage) ?$postMessage : '' ?></span>
 </form>
 
 

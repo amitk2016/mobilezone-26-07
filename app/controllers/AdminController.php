@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 class AdminController extends PageController
 {
-	
+
 		public function __construct($dbc){
 			parent::__construct();
 
@@ -20,7 +20,7 @@ class AdminController extends PageController
 				$this->processNewProducts();
 			}
 		}
-	
+
 
 
 	public function buildHTML(){
@@ -50,10 +50,22 @@ class AdminController extends PageController
 			$this->data['priceMessage'] = '<p>Required</p>';
 			$totalErrors++;
 		}
+		if ( strlen( $list_price ) == 0 ) {
+			$this->data['listPriceMessage'] = '<p>Required</p>';
+			$totalErrors++;
+		}
 		// if ( is_numeric($price) ) {
 		// 	$this->data['priceMessage'] = '<p>Must be a Number</p>';
 		// 	$totalErrors++;
 		// }
+		if ($brand == "") {
+			$this->data['brandMessage'] = '<p>Please Select an Option</p>';
+		}
+
+		if ($categories == "") {
+			$this->data['categoriesMessage'] = '<p>Please Select an Option</p>';
+		}
+
 
 		if ( strlen( $desc ) == 0 ) {
 			$this->data['descMessage'] = '<p>Required</p>';
@@ -71,18 +83,15 @@ class AdminController extends PageController
 			// Get the id of logged in user
 			$userID = $_SESSION['id'];
 			//SQL
-			$sql = "INSERT INTO mobiles(title,price,list_price,brand,categories,description,user_id)
-							VALUES ('$title',$price,$list_price,$brand,'$categories,'$desc',$userID)";
+			$sql = "INSERT INTO mobiles(title,price,list_price,brand,categories,description)
+							VALUES ('$title',$price,$list_price,'$brand','$categories','$desc')";
 
 			$this->db->query($sql);
-			
-			echo'<pre>';
-			print_r($sql);
-			die();
+
 			
 			//Make sure it worked
 			if ($this->db->affected_rows) {
-				$this->data['postMessage'] = 'Product Has been Successfully Added!' ; 
+				$this->data['postMessage'] = 'Product Has been Successfully Added!' ;
 			}else
 				$this->data['postMessage'] = 'Something Went Wrong';
 			// Sucess message ! or error message

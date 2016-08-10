@@ -22,26 +22,29 @@
    <div class="form-group">
      <label for="list_price">List Price:</label>
      <input type="text" class="form-control" name="list_price" id="list_price" value="">
-     <?= isset($subjectMessage) ?$subjectMessage : '' ?>
+     <?= isset($listPriceMessage) ? $listPriceMessage : '' ?>
    </div>
    <div class="form-group">
      <label for="brand">Brand:</label>
      <select class="form-control" name="brand">
-     	<option value=""><-- Please Select Option--></option>
+     	<option value="">Please Select Option</option>
 		<option value="apple">Apple</option>
-		<option>Samsung</option>
-		<option>Xiaomi</option>
-		<option>Oneplus</option>
-		<option>HTC</option>
-	</select>
+		<option value="samsung">Samsung</option>
+		<option value="xiaomi">Xiaomi</option>
+		<option value="oneplus">Oneplus</option>
+		<option value="htc">HTC</option>
+	</select
+    <?= isset($brandMessage) ? $brandMessage : '' ?>
    </div>
    <div class="form-group">
      <label for="brand">Categories:</label>
      <select class="form-control" name="categories">
-		<option>mobiles</option>
-		<option>tablets</option>
-		<option>accessories</option>
-	</select>
+       <option value="">Please select a category</option>
+    		<option value="mobiles">mobiles</option>
+    		<option value="tablets">tablets</option>
+    		<option value="accessories">accessories</option>
+	  </select>
+      <?= isset($categoriesMessage) ? $categoriesMessage : '' ?>
    </div>
 
    <div class="form-group">

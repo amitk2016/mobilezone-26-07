@@ -54,6 +54,13 @@ class UsersController extends PageController
 			// Run the query
 			$this->db->query($sql);
 
+			//Make sure it worked
+			if ($this->db->affected_rows) {
+				$this->data['postMessage'] = 'Your Blog Has been Successfully Posted!' ;
+			}else
+				$this->data['postMessage'] = 'Something Went Wrong';
+			// Sucess message ! or error message
+
 		}
 
 	}
@@ -93,11 +100,11 @@ class UsersController extends PageController
 							VALUES ('$subject','$desc',$userID)";
 
 			$this->db->query($sql);
-			
-			
+
+
 			//Make sure it worked
 			if ($this->db->affected_rows) {
-				$this->data['postMessage'] = 'Your Blog Has been Successfully Posted!' ; 
+				$this->data['postMessage'] = 'Your Blog Has been Successfully Posted!' ;
 			}else
 				$this->data['postMessage'] = 'Something Went Wrong';
 			// Sucess message ! or error message
