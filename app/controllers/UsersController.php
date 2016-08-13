@@ -47,8 +47,8 @@ class UsersController extends PageController
 
 			//prepare the sql
 			$sql = "UPDATE users
-							SET first-name = '$firstName',
-									last-name  = '$lastName'
+							SET first_name = '$firstName',
+									last_name  = '$lastName'
 							WHERE id = $userID";
 
 			// Run the query

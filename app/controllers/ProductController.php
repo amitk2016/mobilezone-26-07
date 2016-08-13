@@ -1,15 +1,16 @@
-<?php 
+<?php
 
 
 class ProductController extends PageController{
-	// Properties 
+	// Properties
 
 	public function __construct($dbc) {
 
 		parent::__construct();
 
-		$this->dbc = $dbc;
+		$this->db = $dbc;
 
+		$this->getEachProduct();
 	}
 
 	// public function __construct(argument)
@@ -18,15 +19,29 @@ class ProductController extends PageController{
 	// }
 
 	public function buildHTML(){
-
-		//create instance of plates library 
-
-		$plates = new League\Plates\Engine('app/templates');
-
-
-		echo $plates->render('product');
+		echo $this->plates->render('product',$this->data);
 	}
 
+	private function getEachProduct(){
+
+		$productID = $this->db->real_escape_string( $_GET['productid']);
+
+		$sql = "SELECT title, price, description,image
+						FROM mobiles
+						WHERE id = $productID";
+
+		$result = $this->db->query($sql);
+
+		if (!$result || $result->num_rows == 0 ) {
+			header('Location: index.php?page=error');
+		}else{
+
+			$this->data['product']= $result->fetch_assoc();
+
+		}
+
+
+	}
 
 
 }

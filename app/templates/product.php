@@ -1,4 +1,4 @@
-<?php 
+<?php
 
   $this->layout('master',[
     'title'=> "Products",
@@ -27,12 +27,93 @@
         </div>
         <div class="col-md-9 col-sm-9 col-xs-12">
           <div class="thumbnail">
-              <img src="assets/images/iphone6plus.jpg" alt="Iphone" width="500">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="center-block">
+                    <img src="assets/images/iphone6plus.jpg" alt="Iphone" class="details img-responsive">
+                  </div>
+
+                </div>
+                <div class="col-sm-12">
+                  <h4>Details</h4>
+                  <p><?=$product['description']?></p>
+                  <hr>
+                  <div class="col-sm-6">
+                    <h4 class="text-left">
+                      Brand : Apple
+                    </h4>
+                  </div>
+                  <div class="col-sm-6">
+                      <h4 class="text-right">Price :$<?=$product['price']?></h4>
+                  </div>
+
+                  <form action="index.php?page=cart" method="post">
+                    <div class="form-group">
+                      <div class="col-md-3">
+                        <label for="quantity">Quantity:</label>
+                        <input type="text" class="form-control" id="quantity" name="quantity">
+                        <br>
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-6">
+                        <label for="color">Color:</label>
+                        <select name="color" id="color" class="form-control">
+                          <option value="1">White</option>
+                          <option value="2">Black</option>
+                          <option value="3">Grey</option>
+                          <option value="4">Gold</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-10">
+                  <p>Avaliable:3</p>
+                </div>
+                <div class="col-sm-2">
+                  <button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button>
+                </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+              <!-- <img src="assets/images/iphone6plus.jpg" alt="Iphone" width="500">
               <div class="caption">
               <h3 class="pull-right">$999</h3>
-                <h3>Iphone</h3>
+                <h3><?=$product['title']?></h3>
                 <p>3D Touch. 12-megapixel photos. 4K video.One powerful phone.</p>
-                
+                <form action="index.php?page=cart" method="post">
+  								<div class="form-group">
+  									<div class="col-md-3">
+  										<label for="quantity">Quantity:</label>
+  										<input type="text" class="form-control" id="quantity" name="quantity">
+  										<br>
+  										<p>Avaliable:3</p>
+  									</div>
+  								</div>
+  								<div class="form-group">
+  									<div class="col-md-6">
+  										<label for="color">Color:</label>
+  										<select name="color" id="color" class="form-control">
+  											<option value="1">White</option>
+  											<option value="2">Black</option>
+  											<option value="3">Grey</option>
+  											<option value="4">Gold</option>
+  										</select>
+  									</div>
+  								</div>
+  							</form>
+
                 <div>
                   <p class="pull-right"> 3 Reviews</p>
                   <p>
@@ -44,10 +125,10 @@
                     5 stars
 
                   </p>
-                  
+
                 </div>
-              </div>
-          </div>   
+              </div> -->
+          </div>
 
           <div class="well">
               <p class="text-right"><a href="#" class="btn btn-success">Leave a Review</a></p>
@@ -98,7 +179,5 @@
               </div>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
-
-

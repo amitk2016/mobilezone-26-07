@@ -77,10 +77,10 @@ class AdminController extends PageController
 			$this->data['descMessage'] = '<p>Can not be more than 1000 characters</p>';
 			$totalErrors;
 		}
-		// Image field validation 
+		// Image field validation
 		if ( in_array( $_FILES['image']['error'],[1,3,4] ) ) {
-			
-			// Show error message 
+
+			// Show error message
 			$this->data['imageMessage'] = 'Image failed to upload';
 			$totalErrors++;
 		}elseif( !in_array( $_FILES['image']['type'],$this->acceptableImageTypes ) ){
@@ -102,7 +102,7 @@ class AdminController extends PageController
 
 			$image->save("assets/images/uploads/original/{$fileName}{$fileExtension}");
 
-			$image->resize(200, null, function ($constraint) {
+			$image->resize(160, null, function ($constraint) {
 				    $constraint->aspectRatio();
 			});
 

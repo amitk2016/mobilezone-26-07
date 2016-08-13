@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="<?= $description ?>"> 
+    <meta name="description" content="<?= $description ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <!--  <meta http-equiv="refresh" content="3"> -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/3ea3387309.js"></script>
   </head>
@@ -41,14 +41,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="index.php?page=home">Home<span class="sr-only">(current)</span></a></li>
-                    
+
 
                     <li class="dropdown">
                         <a href="index.php?page=aboutus" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
                         <ul class="dropdown-menu nav-ul">
                             <li><a href="index.php?page=aboutus">About Us</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="index.php?page=blogs">Blogs</a></li>                           
+                            <li><a href="index.php?page=blogs">Blogs</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="index.php?page=faq">FAQ</a></li>
                         </ul>
@@ -65,7 +65,7 @@
                     </li>
                     <li><a href="index.php?page=contact">Contact</a></li>
                   </ul>
-                 
+
 
                   <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -80,6 +80,7 @@
                         <li><a href="index.php?page=login">Login</a></li>
                         <li><a href="index.php?page=register">Register</a></li>
                          <li><a href="index.php?page=logout">Logout</a></li>
+                         <li><a href="index.php?page=checkout">Checkout</a></li>
                           <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                           <form class="navbar-form navbar-left" role="search">
                           <div class="form-group ">
@@ -97,7 +98,7 @@
     <!-- Ends navbar -->
 
     <main>
-      
+
           <?php echo $this->section('content')?>
 
     </main>
@@ -122,7 +123,7 @@
                 <h4>About Us</h4>
                 <span><a href="#">About Us</a></span>
                 <span><a href="#">News</a></span>
-                <span><a href="#">Sitemap</a></span>              
+                <span><a href="#">Sitemap</a></span>
             </div>
           </div>
         </div>

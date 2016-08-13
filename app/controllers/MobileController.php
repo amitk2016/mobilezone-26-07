@@ -21,12 +21,9 @@ class MobileController extends PageController {
 		//Get the products from database
 		$allProducts = $this->getMobileProducts();
 
-		$data = [];
+		$this->data['allProducts'] = $allProducts;
 
-		$data['allProducts'] = $allProducts;
-
-
-		echo $this->plates->render('mobiles', $data);
+		echo $this->plates->render('mobiles', $this->data);
 	}
 
 	private function getMobileProducts(){

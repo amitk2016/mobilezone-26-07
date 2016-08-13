@@ -12,10 +12,18 @@
 <div class="container-fluid mobile-box">
 	<!-- Left sidebar -->
 	<div class="col-md-2">
-	Left side bar
+    <p class="lead">Category</p>
+      <div class="list-group">
+          <a href="#" class="list-group-item active">Brands</a>
+          <a href="#" class="list-group-item">Apple</a>
+          <a href="#" class="list-group-item">Samsung</a>
+          <a href="#" class="list-group-item">Xaomi</a>
+          <a href="#" class="list-group-item">Nokia</a>
+          <a href="#" class="list-group-item">Motorola</a>
+      </div>
 	</div>
 	<!-- Main content  -->
-	<div class="col-md-8">
+	<div class="col-md-9">
 		<div class="row">
 			<h2 class="text-center">Mobile Products</h2>
 
@@ -23,9 +31,10 @@
 				<div class="col-md-3">
 					<h4><?=htmlentities($product['title'])?></h4>
 					<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
+          <br>
 					<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
 					<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
-          <a href="index.php?page=products" class="btn btn-primary btn-sm active" role="button">Details</a>
+          <a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
 				</div>
         <?php endforeach ?>
 
@@ -203,7 +212,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-2">
+	<div class="col-md-1">
 		Right side bar
 	</div>
 </div>
