@@ -133,8 +133,7 @@
                       <h4><strong>Total $ 999</strong></h4>
                     </div>
                     <div class="col-md-3" col-xs-12>
-                      <button class="btn btn-success btn-lg btn-block">Checkout</button>
-                      
+                      <a href="index.php?page=checkout"><button class="btn btn-success btn-lg btn-block">Checkout</button></a>
                     </div>
                   
                 </div>

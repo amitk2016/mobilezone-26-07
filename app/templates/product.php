@@ -74,7 +74,7 @@
                   <p>Avaliable:3</p>
                 </div>
                 <div class="col-sm-2">
-                  <button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button>
+                  <a href="index.php?page=cart&userid=<?=$_SESSION['id']?>"><button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button></a>
                 </div>
                 </div>
 

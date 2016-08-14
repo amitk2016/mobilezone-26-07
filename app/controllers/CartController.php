@@ -10,6 +10,7 @@ class CartController extends PageController{
 
 		$this->db = $dbc;
 
+		$this->getCartData();
 	}
 
 
@@ -18,6 +19,34 @@ class CartController extends PageController{
 		echo $this->plates->render('cart');
 	}
 
+	private function getCartData(){
 
+		//Fiter the ID 
+		$userID = $_SESSION['id'];
+
+		//Get info about this cart 
+		$sql = "SELECT *
+				FROM cart 
+				JOIN mobiles 
+				ON product_id = mobiles.id
+				WHERE user_id = $userID";
+
+		// Run the SQL 
+		$result = $this->db->query($sql);
+
+		// if the query failed 
+		if ( !$results || $results->num_rows == 0 ) {
+			
+			header('Location: index.php?page=error');
+
+		}else{
+
+			$cartData = $result->fetch_assoc();
+			echo '<pre>';
+			print_r($cartData);
+			die();
+		}
+
+	}
 
 }
