@@ -1,30 +1,21 @@
-<?php 
+<?php
 
 
 class CartController extends PageController{
-	// Properties 
+	// Properties
 
 	public function __construct($dbc) {
 
 		parent::__construct();
 
-		$this->dbc = $dbc;
+		$this->db = $dbc;
 
 	}
 
-	// public function __construct(argument)
-	// {
-	// 	# code...
-	// }
+
 
 	public function buildHTML(){
-
-		//create instance of plates library 
-
-		$plates = new League\Plates\Engine('app/templates');
-
-
-		echo $plates->render('cart');
+		echo $this->plates->render('cart');
 	}
 
 
