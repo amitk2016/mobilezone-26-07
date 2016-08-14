@@ -10,6 +10,10 @@ class CartController extends PageController{
 
 		$this->db = $dbc;
 
+		if( isset($_POST['addtoCart'])){
+			$this->addtoCart();
+		}
+		
 		$this->getCartData();
 	}
 
@@ -17,6 +21,23 @@ class CartController extends PageController{
 
 	public function buildHTML(){
 		echo $this->plates->render('cart');
+	}
+
+	private function addtoCart(){
+		$userID = $_SESSION['id'];
+		$productID = // hidden input 
+
+		//Get the price from the product
+		//Run a select query to get price of product
+
+		//Calculate the subtotal
+		//Multiply the quantity by the product price
+
+		//Insert Query
+		//Get data from post variable
+
+
+
 	}
 
 	private function getCartData(){
