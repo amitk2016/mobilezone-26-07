@@ -23,7 +23,7 @@ class ProductController extends PageController{
 
 		$productID = $this->db->real_escape_string( $_GET['productid']);
 
-		$sql = "SELECT title, price, description,image
+		$sql = "SELECT id,title, price, description,image
 						FROM mobiles
 						WHERE id = $productID";
 

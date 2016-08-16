@@ -48,11 +48,11 @@
                       <h4 class="text-right">Price :$<?=$product['price']?></h4>
                   </div>
 
-                  <form action="index.php?page=cart" method="post">
+                  <form action="index.php?page=cart&productID=<?= $_GET['productid'] ?>" method="post">
                     <div class="form-group">
                       <div class="col-md-3">
                         <label for="quantity">Quantity:</label>
-                        <input type="text" class="form-control" id="quantity" name="quantity" value="">
+                        <input type="number" class="form-control" id="quantity" name="quantity" value="" max="" min="0">
                         <br>
                       </div>
                     </div>
@@ -60,10 +60,10 @@
                       <div class="col-md-6">
                         <label for="color">Color:</label>
                         <select name="color" id="color" class="form-control">
-                          <option value="1">White</option>
-                          <option value="2">Black</option>
-                          <option value="3">Grey</option>
-                          <option value="4">Gold</option>
+                          <option value="white">White</option>
+                          <option value="black">Black</option>
+                          <option value="grey">Grey</option>
+                          <option value="gold">Gold</option>
                         </select>
                       </div>
                     </div>
@@ -73,7 +73,6 @@
                     <div class="col-sm-2">
                       <a href="index.php?page=cart&userid=<?=$_SESSION['id']?>"><button class="btn btn-warning" name ="addtoCart" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button></a>
                     </div>
-                    <input type="hidden" name="productid" value="">
                   </form>
                   <br>
                 </div>

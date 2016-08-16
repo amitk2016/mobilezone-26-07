@@ -24,34 +24,31 @@ class CartController extends PageController{
 	}
 
 	private function addtoCart(){
+
 		$userID = $_SESSION['id'];
-		$productID = $_POST['productid'];// hidden input
+		$productID = $_GET['productID'];
+		$quantity = $_POST['quantity'];
 
 		//Get the price from the product
 		$sql = "SELECT price
-						FROM mobiles";
+				FROM mobiles
+				WHERE id = '$productID' ";
 
 		//Run a select query to get price of product
 		$result = $this->db->query($sql);
 
 		$productPrice = $result->fetch_assoc();
+		$price = $productPrice['price'];
 
-		// $productQuantity = $this->db->real_escape_string( $_POST['quantity'] );
 		// //Calculate the subtotal
 		// //Multiply the quantity by the product price
-		// $subTotal = $productPrice * $productQuantity ;
+		$subtotal = $price * $quantity;
+
 		//Insert Query
-		$sql1 = "INSERT INTO cart(user_id,price)
-						 VALUES ($userID,$productPrice)";
-						 echo '<pre>';
-				 		print_r($sql1);
-				 		die();
+		$sql1 = "INSERT INTO cart(user_id,product_id,qty,subtotal)
+				 VALUES ('$userID', '$productID', '$quantity', '$subtotal')";
+
 		$this->db->query($sql1);
-
-
-		//Get data from post variable
-
-
 	}
 
 	private function getCartData(){
@@ -60,28 +57,28 @@ class CartController extends PageController{
 		$userID = $_SESSION['id'];
 
 		//Get info about this cart
-		$sql = "SELECT *
+		$sql = "SELECT cart.id AS cart_item_id, user_id, product_id,subtotal,title,price,list_price
 				FROM cart
 				JOIN mobiles
 				ON product_id = mobiles.id
 				WHERE user_id = $userID";
-
-		echo "<pre>";
-		print_r($sql);
-		die();
-
 		// Run the SQL
-		$result = $this->db->query($sql);
+		$results = $this->db->query($sql);
+
 
 		// if the query failed
 		if ( !$results || $results->num_rows == 0 ) {
-
+			
 			header('Location: index.php?page=error');
 
 		}else{
+			
+			$cartData = $results->fetch_assoc();
 
-			$cartData = $result->fetch_assoc();
-
+			echo '<pre>';
+			print_r($cartData);
+			die();
+			
 		}
 
 	}
