@@ -20,7 +20,7 @@ class CartController extends PageController{
 
 
 	public function buildHTML(){
-		echo $this->plates->render('cart');
+		echo $this->plates->render('cart',$this->data);
 	}
 
 	private function addtoCart(){
@@ -28,7 +28,7 @@ class CartController extends PageController{
 		$userID = $_SESSION['id'];
 		$productID = $_GET['productID'];
 		$quantity = $_POST['quantity'];
-
+		$this->data['qty'] = $quantity;
 		//Get the price from the product
 		$sql = "SELECT price
 				FROM mobiles
@@ -57,7 +57,7 @@ class CartController extends PageController{
 		$userID = $_SESSION['id'];
 
 		//Get info about this cart
-		$sql = "SELECT cart.id AS cart_item_id, user_id, product_id,subtotal,title,price,list_price
+		$sql = "SELECT cart.id AS cart_item_id, user_id, product_id,subtotal,title,price,list_price,qty,image
 				FROM cart
 				JOIN mobiles
 				ON product_id = mobiles.id
@@ -73,12 +73,8 @@ class CartController extends PageController{
 
 		}else{
 			
-			$cartData = $results->fetch_assoc();
-
-			echo '<pre>';
-			print_r($cartData);
-			die();
-			
+			$this->data['cartAllData'] = $results->fetch_all(MYSQL_ASSOC);
+	
 		}
 
 	}
