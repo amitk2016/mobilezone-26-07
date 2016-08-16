@@ -13,7 +13,7 @@ class CartController extends PageController{
 		if( isset($_POST['addtoCart'])){
 			$this->addtoCart();
 		}
-		
+
 		$this->getCartData();
 	}
 
@@ -25,47 +25,63 @@ class CartController extends PageController{
 
 	private function addtoCart(){
 		$userID = $_SESSION['id'];
-		$productID = // hidden input 
+		$productID = $_POST['productid'];// hidden input
 
 		//Get the price from the product
+		$sql = "SELECT price
+						FROM mobiles";
+
 		//Run a select query to get price of product
+		$result = $this->db->query($sql);
 
-		//Calculate the subtotal
-		//Multiply the quantity by the product price
+		$productPrice = $result->fetch_assoc();
 
+		// $productQuantity = $this->db->real_escape_string( $_POST['quantity'] );
+		// //Calculate the subtotal
+		// //Multiply the quantity by the product price
+		// $subTotal = $productPrice * $productQuantity ;
 		//Insert Query
-		//Get data from post variable
+		$sql1 = "INSERT INTO cart(user_id,price)
+						 VALUES ($userID,$productPrice)";
+						 echo '<pre>';
+				 		print_r($sql1);
+				 		die();
+		$this->db->query($sql1);
 
+
+		//Get data from post variable
 
 
 	}
 
 	private function getCartData(){
 
-		//Fiter the ID 
+		//Fiter the ID
 		$userID = $_SESSION['id'];
 
-		//Get info about this cart 
+		//Get info about this cart
 		$sql = "SELECT *
-				FROM cart 
-				JOIN mobiles 
+				FROM cart
+				JOIN mobiles
 				ON product_id = mobiles.id
 				WHERE user_id = $userID";
 
-		// Run the SQL 
+		echo "<pre>";
+		print_r($sql);
+		die();
+
+		// Run the SQL
 		$result = $this->db->query($sql);
 
-		// if the query failed 
+		// if the query failed
 		if ( !$results || $results->num_rows == 0 ) {
-			
+
 			header('Location: index.php?page=error');
 
 		}else{
 
 			$cartData = $result->fetch_assoc();
-			echo '<pre>';
-			print_r($cartData);
-			die();
+
 		}
 
 	}

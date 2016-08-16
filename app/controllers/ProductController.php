@@ -13,10 +13,7 @@ class ProductController extends PageController{
 		$this->getEachProduct();
 	}
 
-	// public function __construct(argument)
-	// {
-	// 	# code...
-	// }
+	
 
 	public function buildHTML(){
 		echo $this->plates->render('product',$this->data);

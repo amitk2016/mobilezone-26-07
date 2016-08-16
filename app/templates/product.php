@@ -52,9 +52,8 @@
                     <div class="form-group">
                       <div class="col-md-3">
                         <label for="quantity">Quantity:</label>
-                        <input type="text" class="form-control" id="quantity" name="quantity">
+                        <input type="text" class="form-control" id="quantity" name="quantity" value="">
                         <br>
-
                       </div>
                     </div>
                     <div class="form-group">
@@ -68,14 +67,17 @@
                         </select>
                       </div>
                     </div>
+                    <div class="col-sm-10">
+                      <p>Avaliable:3</p>
+                    </div>
+                    <div class="col-sm-2">
+                      <a href="index.php?page=cart&userid=<?=$_SESSION['id']?>"><button class="btn btn-warning" name ="addtoCart" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button></a>
+                    </div>
+                    <input type="hidden" name="productid" value="">
                   </form>
+                  <br>
                 </div>
-                <div class="col-sm-10">
-                  <p>Avaliable:3</p>
-                </div>
-                <div class="col-sm-2">
-                  <a href="index.php?page=cart&userid=<?=$_SESSION['id']?>"><button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button></a>
-                </div>
+
                 </div>
 
             </div>
@@ -90,7 +92,7 @@
               <!-- <img src="assets/images/iphone6plus.jpg" alt="Iphone" width="500">
               <div class="caption">
               <h3 class="pull-right">$999</h3>
-                <h3><?=$product['title']?></h3>
+                <h3></h3>
                 <p>3D Touch. 12-megapixel photos. 4K video.One powerful phone.</p>
                 <form action="index.php?page=cart" method="post">
   								<div class="form-group">
