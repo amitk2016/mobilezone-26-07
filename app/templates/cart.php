@@ -1,4 +1,4 @@
- <?php 
+ <?php
   $this->layout('master',[
     'title'=> "CartPage",
     'description'=> "Enjoy your shopping"
@@ -21,14 +21,14 @@
                   </div>
                   <div class="col-md-6">
                     <a href="index.php?page=mobile"><button class="btn btn-primary btn-sm pull-right"><span class="glyphicon glyphicon-share-alt"></span> Continue Shopping</button></a>
-                    
+
                   </div>
 
-                  
+
                 </div>
               </div>
               <div class="panel-body">
-                  
+
                     <?php foreach($cartAllData as $cartEachItem): ?>
                       <div class="row">
                       <div class="col-md-2 col-xs-12">
@@ -55,9 +55,10 @@
                           </div>
                       </div>
                        </div>
+                        <hr>
                     <?php endforeach ?>
-                 
-                  <hr>
+
+
 
                    <!-- <div class="row">
 
@@ -85,7 +86,7 @@
                         </div>
 
                     </div>
-                    
+
                   </div>
                   <hr>
                    <div class="row">
@@ -114,7 +115,7 @@
                         </div>
 
                     </div>
-                    
+
                   </div>
                   <hr> -->
 
@@ -124,7 +125,7 @@
                     </div>
                     <div class="col-md-3" col-xs-12>
                       <button class="btn btn-default btn-sm btn-block">Update Cart</button>
-                      
+
                     </div>
                   </div>
               </div>
@@ -136,7 +137,7 @@
                     <div class="col-md-3" col-xs-12>
                       <a href="index.php?page=checkout"><button class="btn btn-success btn-lg btn-block">Checkout</button></a>
                     </div>
-                  
+
                 </div>
 
 
