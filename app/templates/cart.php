@@ -47,7 +47,7 @@
                           </div>
 
                           <div class="col-md-4 col-xs-9">
-                            <input type="text" class="form-control input-sm" name="" value="">
+                            <input type="text" class="form-control input-sm" name="" value="<?=$cartEachItem['qty']?>">
                           </div>
 
                           <div class="col-md-2 col-xs-2" >
@@ -131,16 +131,13 @@
               </div>
               <div class="panel-footer">
                 <div class="row">
-                  <div class="col-md-9 col-xs-12 text-right" >
-                      <h4><strong>Total $ 999</strong></h4>
+                    <div class="col-md-9 col-xs-12 text-right" >
+                      <h4><strong>Total $ 1099</strong></h4>
                     </div>
                     <div class="col-md-3" col-xs-12>
                       <a href="index.php?page=checkout"><button class="btn btn-success btn-lg btn-block">Checkout</button></a>
                     </div>
-
                 </div>
-
-
               </div>
             </div>
           </div>

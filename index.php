@@ -86,9 +86,11 @@ switch ($page) {
       unset($_SESSION['privilege']);
       header('Location: index.php');
   break;
-  
 
-
+  case 'thankyou':
+     require 'app/controllers/ThankyouController.php';
+     $controller = new ThankyouController();
+  break;
   default:
      require 'app/controllers/ErrorController.php';
      $controller = new ErrorController();

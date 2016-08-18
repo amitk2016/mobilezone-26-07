@@ -48,7 +48,7 @@
                       <h4 class="text-right">Price :$<?=$product['price']?></h4>
                   </div>
 
-                  <form action="index.php?page=cart&productID=<?= $_GET['productid'] ?>" method="post">
+                  <form action="index.php?page=cart&productID=<?= $_GET['productid']?>" method="post">
                     <div class="form-group">
                       <div class="col-md-3">
                         <label for="quantity">Quantity:</label>

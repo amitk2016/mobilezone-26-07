@@ -47,7 +47,7 @@ class CartController extends PageController{
 		//Insert Query
 		$sql1 = "INSERT INTO cart(user_id,product_id,qty,subtotal)
 				 VALUES ('$userID', '$productID', '$quantity', '$subtotal')";
-
+		die($sql1);
 		$this->db->query($sql1);
 	}
 
@@ -68,13 +68,13 @@ class CartController extends PageController{
 
 		// if the query failed
 		if ( !$results || $results->num_rows == 0 ) {
-			
+
 			header('Location: index.php?page=error');
 
 		}else{
-			
+
 			$this->data['cartAllData'] = $results->fetch_all(MYSQL_ASSOC);
-	
+
 		}
 
 	}
