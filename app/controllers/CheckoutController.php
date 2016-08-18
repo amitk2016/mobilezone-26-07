@@ -26,12 +26,24 @@ class CheckoutController extends PageController{
 		$userID = $_SESSION['id'];
 
 		// select all the information from cart table
-		$sql = "SELECT checkout.id AS checkout_item_id, first_name,last_name, price,subtotal,title,qty
+		$sql = "SELECT checkout.id AS checkout_item_id,price,subtotal,title,qty
 						FROM checkout
 						JOIN cart
 						ON cart_id = cart.id
 						WHERE user_id = $userID";
 		die($sql);
+
+		// Select the data from cart 
+
+		// Insert the data to checkout/orders 
+
+		// delete the data from cart table
+		
+
+
+
+
+
 		// run the query
 
 		// insert the data into checkout table
