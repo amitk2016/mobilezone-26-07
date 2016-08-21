@@ -26,16 +26,36 @@ class CheckoutController extends PageController{
 		$userID = $_SESSION['id'];
 
 		// select all the information from cart table
-		$sql = "SELECT checkout.id AS checkout_item_id,price,subtotal,title,qty
-						FROM checkout
-						JOIN cart
-						ON cart_id = cart.id
-						WHERE user_id = $userID";
-		die($sql);
+		$sql = "SELECT cart.id,subtotal,qty,first_name,last_name,email
+				FROM cart
+				JOIN users
+				ON user_id = users.id
+				WHERE user_id = '$userID'";
+						
+		$results = $this->db->query($sql);
 
-		// Select the data from cart 
+		// if the query failed
+		if ( !$results || $results->num_rows == 0 ) {
+
+			header('Location: index.php?page=error');
+
+		}else{
+
+			$this->data['cartAllData'] = $results->fetch_all(MYSQL_ASSOC);
+
+		}
+
+
+
+
+		// Select the data from cart
+
+		$sql = "INSERT INTO checkout(checkout.id,cart.id,subtotal,qty,first_name,last_name)
+				VALUES ('$checkoutID', '$cartID', '$subtotal', 'qty','fName','lName')"; 
 
 		// Insert the data to checkout/orders 
+
+
 
 		// delete the data from cart table
 		

@@ -22,7 +22,7 @@
               <div class="panel-heading">Payment</div>
                 <div class="panel-body">
 
-                    <form action="index.php?page=thankyou" method="post">
+                    <form action="index.php?page=checkout" method="post">
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                           <div class="form-group">
@@ -69,7 +69,7 @@
                           </div>
                         </div>
                       </div>
-                      <a href="index.php?page=thankyou"><button type="submit" name="checkout" class="btn btn-success">Place Order</button></a>
+                      <a href="index.php?page=checkout"><button type="submit" name="checkout" class="btn btn-success">Place Order</button></a>
                     </form>
                 </div>
             </div>

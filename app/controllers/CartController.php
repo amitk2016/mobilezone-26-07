@@ -47,7 +47,7 @@ class CartController extends PageController{
 		//Insert Query
 		$sql1 = "INSERT INTO cart(user_id,product_id,qty,subtotal)
 				 VALUES ('$userID', '$productID', '$quantity', '$subtotal')";
-		die($sql1);
+		
 		$this->db->query($sql1);
 	}
 
