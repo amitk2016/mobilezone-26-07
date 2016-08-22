@@ -1,3 +1,4 @@
+
 <?php
 
 use Intervention\Image\ImageManager;

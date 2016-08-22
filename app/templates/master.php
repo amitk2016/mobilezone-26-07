@@ -68,14 +68,17 @@
 
 
                   <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
-                        <ul class="dropdown-menu nav-ul">
-                            <li><a href="index.php?page=adminproducts">Products</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="index.php?page=products">Users</a></li>
-                        </ul>
-                    </li>
+                    <?php if ( isset($_SESSION['id']) == 'admin'): ?>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                          <ul class="dropdown-menu nav-ul">
+                              <li><a href="index.php?page=adminproducts">Products</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="index.php?page=products">Users</a></li>
+                          </ul>
+                      </li>
+                    <?php endif; ?>
+
                         <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
 
                       <?php if (!isset($_SESSION['id'])): ?>

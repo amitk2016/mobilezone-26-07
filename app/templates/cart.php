@@ -50,10 +50,12 @@
                             <input type="text" class="form-control input-sm" name="" value="<?=$cartEachItem['qty']?>">
                           </div>
 
-                          <div class="col-md-2 col-xs-2" >
-                            <button class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
-                          </div>
-                          
+                          <form action="index.php?page=cart&cartID=<?=$cartEachItem['cart_item_id']?>" method="post">
+                            <div class="col-md-2 col-xs-2" >
+                              <button name="cart-delete" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                            </div>
+                          </form>
+
                       </div>
                        </div>
                         <hr>

@@ -13,6 +13,10 @@ class CartController extends PageController{
 		if( isset($_POST['addtoCart'])){
 			$this->addtoCart();
 		}
+	
+		if ( isset($_POST['cart-delete']) ) {
+			$this->deleteItem();
+		}
 
 		$this->getCartData();
 	}
@@ -69,7 +73,7 @@ class CartController extends PageController{
 		// if the query failed
 		if ( !$results || $results->num_rows == 0 ) {
 
-			header('Location: index.php?page=error');
+			header('Location: index.php?page=home');
 
 		}else{
 
@@ -78,5 +82,22 @@ class CartController extends PageController{
 		}
 
 	}
+
+	private function deleteItem(){
+
+		$userID = $_SESSION['id'];
+		
+		$cartID = $_GET['cartID'];
+		$sql = "DELETE FROM cart 
+				WHERE cart.id = $cartID
+				AND user_id = $userID";
+
+		$results = $this->db->query($sql);
+
+
+	}
+
+
+
 
 }
