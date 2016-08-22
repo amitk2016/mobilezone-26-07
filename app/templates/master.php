@@ -76,9 +76,11 @@
                             <li><a href="index.php?page=products">Users</a></li>
                         </ul>
                     </li>
-                        <li><a href="index.php?page=users">Users</a></li>
+                        <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
+                      <?php if (!isset($_SESSION['id'])): ?>
                         <li><a href="index.php?page=login">Login</a></li>
                         <li><a href="index.php?page=register">Register</a></li>
+                      <?php endif; ?>
                          <li><a href="index.php?page=logout">Logout</a></li>
                           <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                           <form action="index.php?page=search" method="post" class="navbar-form navbar-left" role="search">

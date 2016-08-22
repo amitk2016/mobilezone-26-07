@@ -1,4 +1,4 @@
- <?php 
+ <?php
   $this->layout('master',[
     'title'=> "Welcome to MobileZone",
     'description'=> "Explore the latest mobiles and tablets"
@@ -23,41 +23,41 @@
                     <div class="carousel-inner" role="listbox">
                       <div class="item active">
                         <div class="slider-box1">
-                          
+
                         </div>
                         <img src="assets/images/sl8.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          
+
                         </div>
                       </div>
                        <div class="item ">
                        <div class="slider-box2">
-                          
+
                         </div>
                         <img src="assets/images/sl2.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          
+
                         </div>
                       </div>
                        <div class="item ">
                        <div class="slider-box3">
-                          
+
                         </div>
                         <img src="assets/images/sl3.jpg" alt="image-1">
                         <div class="carousel-caption">
-                         
+
                         </div>
                       </div>
                        <div class="item ">
                         <img src="assets/images/sl7.jpg" alt="image-1">
                         <div class="carousel-caption">
-                          
+
                         </div>
                       </div>
                       <div class="item">
                         <img src="assets/images/sl5.jpg" alt="image-2">
                         <div class="carousel-caption">
-                          
+
                         </div>
                       </div>
                       ...
@@ -74,7 +74,7 @@
                     </a>
               </div>
 
-      
+
 
     <!-- Slides show ends here  -->
     <div class="container-fluid main-text">
@@ -140,7 +140,21 @@
       <h1 class="latest">Latest Products</h1>
       <div class="container-fluid">
         <div class="row">
+          <?php foreach($latestProducts as $Product): ?>
             <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                    <img src="assets/images/uploads/original/<?=$Product['image']?>" alt="iphone1">
+                    <div class="caption">
+                      <h3><?=$Product['title']?></h3>
+                      <p><?=$Product['description']?></p>
+                      <p><a href="index.php?page=products&productid=<?=$Product['id']?>" class="btn btn-success" role="button">Details</a>
+                          <a href="index.php?page=cart&productid=<?=$Product['id']?>" name="hpAddToCart" class="btn btn-primary" role="button">Add to Cart</a>
+                      </p>
+                    </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+            <!-- <div class="col-sm-6 col-md-3">
               <div class="thumbnail">
                 <img src="assets/images/product-1.jpg" alt="iphone1">
                   <div class="caption">
@@ -169,17 +183,7 @@
                     <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                   </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="thumbnail">
-                <img src="assets/images/product-1.jpg" alt="iphone1">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>As an iphone 6 owner, you may feel that you are not getting utilizing your phone to</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-            </div>    
+            </div> -->
         </div>
       </div>
 
