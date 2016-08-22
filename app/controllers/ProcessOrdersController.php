@@ -19,7 +19,7 @@ class ProcessOrdersController extends PageController{
 	private function addToOrders(){
 
 		// select all the information from cart table
-		$sql = "SELECT cart.id AS cart_item_id, user_id, product_id,subtotal,title,price,qty
+		$sql = "SELECT cart.id, user_id, product_id,subtotal,title,price,qty
 				FROM cart
 				JOIN mobiles
 				ON product_id = mobiles.id
@@ -31,8 +31,10 @@ class ProcessOrdersController extends PageController{
 
 		foreach($processOrderData as $orderEachItem){
 
+
 			$orderID = uniqid();
 
+			$cartID = $orderEachItem['cart.id'];
 			$userID = $orderEachItem['user_id'];
 			$productID = $orderEachItem['product_id'];
 			$title = $orderEachItem['title'];
@@ -45,7 +47,10 @@ class ProcessOrdersController extends PageController{
 					VALUES ('$orderID','$userID','$productID','$title','$subtotal','$qty','price')";
 
 			$this->db->query($sql);
-			
+
+
+			$sql = "DELETE FROM cart
+					WHERE cart.id = $cartID,";
 
 		}
 
