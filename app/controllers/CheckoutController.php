@@ -16,7 +16,7 @@ class CheckoutController extends PageController{
 	}
 
 	public function buildHTML(){
-		echo $this->plates->render('checkout');
+		echo $this->plates->render('checkout',$this->data);
 	}
 
 
@@ -41,7 +41,7 @@ class CheckoutController extends PageController{
 
 		}else{
 
-			$this->data['cartAllData'] = $results->fetch_all(MYSQL_ASSOC);
+			$this->data['checkoutAllData'] = $results->fetch_all(MYSQL_ASSOC);
 
 		}
 

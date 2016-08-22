@@ -22,7 +22,7 @@
               <div class="panel-heading">Payment</div>
                 <div class="panel-body">
 
-                    <form action="index.php?page=checkout" method="post">
+                    <form action="index.php?page=orders" method="post">
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                           <div class="form-group">
@@ -69,7 +69,7 @@
                           </div>
                         </div>
                       </div>
-                      <a href="index.php?page=checkout"><button type="submit" name="checkout" class="btn btn-success">Place Order</button></a>
+                      <button type="submit" name="checkout" class="btn btn-success">Place Order</button>
                     </form>
                 </div>
             </div>
@@ -162,7 +162,28 @@
                 <span class="pull-right"><a href="#">Edit Chart</a></span>
                   Review Order</div>
                   <div class="panel-body">
-                     <div class="row">
+
+                    <?php foreach ($checkoutAllData as $checkoutEachItem) : ?>
+
+                       <div class="row">
+                          <div class="col-md-4 col-sm-4">
+                              <img src="assets/images/uploads/products/<?=$checkoutEachItem['image']?>">
+                          </div>
+                           <div class="col-md-6 col-sm-6">
+                              <span style="font-size:14px;"><b><?=$checkoutEachItem['title']?></b></span>
+                              <br>
+                              <span>Quantity: <?=$checkoutEachItem['qty']?></span>
+
+                          </div>
+                           <div class="col-md-2 col-sm-2">
+                            <span class="pull-right" style="font-weight:bold; font-size:16px;"> $<?=$checkoutEachItem['price']?></span>
+
+                          </div>
+                       </div>
+                       <hr>
+                    <?php endforeach ?>
+
+                     <!-- <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <img src="assets/images/cart1.jpg">
                         </div>
@@ -178,7 +199,6 @@
                         </div>
                      </div>
                      <hr>
-
                      <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <img src="assets/images/cart1.jpg">
@@ -193,23 +213,7 @@
                           <span class="pull-right" style="font-weight:bold; font-size:16px;  "> $999</span>
 
                         </div>
-                     </div>
-                     <hr>
-                     <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <img src="assets/images/cart1.jpg">
-                        </div>
-                         <div class="col-md-6 col-sm-6">
-                            <span style="font-size:14px;">IPhone 6</span>
-                            <br>
-                            <span>Quantity: 1</span>
-
-                        </div>
-                         <div class="col-md-2 col-sm-2">
-                          <span class="pull-right" style="font-weight:bold; font-size:16px;  "> $999</span>
-
-                        </div>
-                     </div>
+                     </div> -->
                      <hr>
 
                      <div class="row">

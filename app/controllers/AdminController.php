@@ -102,7 +102,7 @@ class AdminController extends PageController
 
 			$image->save("assets/images/uploads/original/{$fileName}{$fileExtension}");
 
-			$image->resize(160, null, function ($constraint) {
+			$image->resize(140, null, function ($constraint) {
 				    $constraint->aspectRatio();
 			});
 
