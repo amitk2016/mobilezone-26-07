@@ -66,6 +66,11 @@ switch ($page) {
      $controller = new CheckoutController($dbc);
   break;
 
+  case 'orders':
+     require 'app/controllers/ProcessOrdersController.php';
+     $controller = new ProcessOrdersController($dbc);
+  break;
+
   case 'users':
      require 'app/controllers/UsersController.php';
      $controller = new UsersController($dbc);

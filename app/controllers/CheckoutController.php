@@ -10,9 +10,8 @@ class CheckoutController extends PageController{
 
 		$this->db = $dbc;
 
-		if ( isset($_POST['checkout'] ) ) {
-			$this->addToCheckout();
-		}
+		$this->addToCheckout();
+		
 
 	}
 
@@ -20,17 +19,18 @@ class CheckoutController extends PageController{
 		echo $this->plates->render('checkout');
 	}
 
+
 	private function addToCheckout(){
 		// validate the form
 
 		$userID = $_SESSION['id'];
 
 		// select all the information from cart table
-		$sql = "SELECT cart.id,subtotal,qty,first_name,last_name,email
+		$sql = "SELECT cart.id AS cart_item_id, user_id, product_id,subtotal,title,price,list_price,qty,image
 				FROM cart
-				JOIN users
-				ON user_id = users.id
-				WHERE user_id = '$userID'";
+				JOIN mobiles
+				ON product_id = mobiles.id
+				WHERE user_id = $userID";
 						
 		$results = $this->db->query($sql);
 
@@ -45,36 +45,6 @@ class CheckoutController extends PageController{
 
 		}
 
-
-
-
-		// Select the data from cart
-
-		$sql = "INSERT INTO checkout(checkout.id,cart.id,subtotal,qty,first_name,last_name)
-				VALUES ('$checkoutID', '$cartID', '$subtotal', 'qty','fName','lName')"; 
-
-		// Insert the data to checkout/orders 
-
-
-
-		// delete the data from cart table
-		
-
-
-
-
-
-		// run the query
-
-		// insert the data into checkout table
-
-		// run the query
-
-		// capture the data
-
-		// check the query result
-
-		// sucessful , send it to the thank you page
 	}
 
 
