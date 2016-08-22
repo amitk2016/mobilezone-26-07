@@ -77,17 +77,19 @@
                         </ul>
                     </li>
                         <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
+
                       <?php if (!isset($_SESSION['id'])): ?>
                         <li><a href="index.php?page=login">Login</a></li>
                         <li><a href="index.php?page=register">Register</a></li>
                       <?php endif; ?>
+
                          <li><a href="index.php?page=logout">Logout</a></li>
                           <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                           <form action="index.php?page=search" method="post" class="navbar-form navbar-left" role="search">
                           <div class="form-group ">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input name="search" type="text" class="form-control" placeholder="Search">
                           </div>
-                          <button name="search" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                          <button name="search-button" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                         </form>
                   </ul>
                     </li>

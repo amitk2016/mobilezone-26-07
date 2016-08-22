@@ -53,6 +53,7 @@
                           <div class="col-md-2 col-xs-2" >
                             <button class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
                           </div>
+                          
                       </div>
                        </div>
                         <hr>

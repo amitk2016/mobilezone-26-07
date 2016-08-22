@@ -82,6 +82,7 @@ class LoginController extends PageController {
 					
 					// log the user in 
 					$_SESSION['id'] = $userData['id'];
+					
 
 					header('Location: index.php?page=home');
 

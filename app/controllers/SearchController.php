@@ -9,7 +9,7 @@ class SearchController extends PageController{
 		$this->db = $dbc;
 
 		$this->getSearch();
-
+	  	
 	}
 
   //Methods (functions)
@@ -18,25 +18,25 @@ class SearchController extends PageController{
 	}
 
   public function getSearch(){
+
+
     if(strlen($_POST['search']) === 0){
 			$searchTerm = "";
-		} else {
-			$result = $_POST['search'];
-      die('hello');
-			$searchTerm = strtolower($result);
-		}
+	} else {
+		$result = $_POST['search'];
+		$searchTerm = strtolower($result);
+	}
 
     $this->data['searchTerm'] = $searchTerm;
 
-    $sql = "SELECT mobiles.id, title AS products_title, description AS products_description
+    $sql = "SELECT mobiles.id, title AS products_title, description AS products_description,price
 				FROM mobiles
 				WHERE
 					title LIKE '%$searchTerm%' OR
 					description LIKE '%$searchTerm%'
 				ORDER BY products_title ASC";
 
-    die($sql);
-
+   
     $result = $this->db->query($sql);
 
     if( !$result || $result->num_rows == 0){
