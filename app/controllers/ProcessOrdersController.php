@@ -64,8 +64,10 @@ class ProcessOrdersController extends PageController{
 			$this->db->query($sql);
 
 
-			// $sql = "DELETE FROM cart
-			// 		WHERE cart.id = $cartID,";
+			$sql = "DELETE FROM cart
+					WHERE cart.id = $cartID";
+
+			$this->db->query($sql);
 
 		}
 

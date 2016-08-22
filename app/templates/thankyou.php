@@ -5,7 +5,7 @@
    ]);
 ?>
 
-<div id="error">
+<div id="thankyou">
 
 
 	<h2>Thank You For Shopping</h2>
