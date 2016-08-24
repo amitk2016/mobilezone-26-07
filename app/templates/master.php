@@ -85,8 +85,9 @@
                         <li><a href="index.php?page=login">Login</a></li>
                         <li><a href="index.php?page=register">Register</a></li>
                       <?php endif; ?>
-
+                      <?php if (isset($_SESSION['id'])): ?>
                          <li><a href="index.php?page=logout">Logout</a></li>
+                      <?php endif; ?>
                           <li><a href="index.php?page=cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                           <form action="index.php?page=search" method="post" class="navbar-form navbar-left" role="search">
                           <div class="form-group ">

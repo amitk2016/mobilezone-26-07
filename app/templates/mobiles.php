@@ -6,32 +6,17 @@
  ?>
 
 
-
-
-
-<div class="container mobile-box">
-	<!-- Left sidebar -->
-	<!-- <div class="col-md-2">
-    <p class="lead">Category</p>
-      <div class="list-group">
-          <a href="#" class="list-group-item active">Brands</a>
-          <a href="#" class="list-group-item">Apple</a>
-          <a href="#" class="list-group-item">Samsung</a>
-          <a href="#" class="list-group-item">Xaomi</a>
-          <a href="#" class="list-group-item">Nokia</a>
-          <a href="#" class="list-group-item">Motorola</a>
-      </div>
-	</div> -->
-	<!-- Main content  -->	
-		<div class="row">
+<div class="container mobile-box" >
+		<!-- Main content  -->	
+		<!-- <div class="row" style="background-color:red;"> -->
 			<h2 class="text-center">Mobile Products (<?=count($allProducts)?>)</h2>
 
 			<?php if( count($allProducts) > 0 ):?>
 
 		        <?php foreach($allProducts as $product): ?>
-					<div class="col-md-3">
+					<div class="col-md-3" >
 						<h4><?=htmlentities($product['title'])?></h4>
-						<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
+						<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="phones"/>
 		         
 						<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
 						<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
@@ -53,20 +38,20 @@
 
 			  <?php for($i=1; $i<=$totalPages; $i++): ?>
 
-				  <li>
+				  <li style="display:inline;">
 				    <a href="index.php?page=mobile&pagination=<?= $i ?>">
-				      Page <?= $i ?>
+				      Page <?=$i?>
 				    </a>
 				  </li>
 
 			  <?php endfor; ?>
 
 			</ul>
-		</div>	
+		<!-- </div>	 -->
 </div>
 
 <!-- Details Modal -->
-<div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
+<!-- <div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content ">
 			<div class="modal-header">
@@ -125,4 +110,4 @@
 		</div>
 	</div>
 
-</div>
+</div> -->

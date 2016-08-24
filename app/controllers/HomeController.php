@@ -11,9 +11,14 @@ class HomeController extends PageController{
 
 		$this->db = $dbc;
 
-		$this->getLatestProducts();
 		
 
+		$this->getLatestProducts();
+		
+		if( isset ($_POST['latestProductCart'] ) ){
+			die('hello');
+			$this->addtoCart();
+		}
 	}
 
 
@@ -41,13 +46,15 @@ class HomeController extends PageController{
 
 		elseif( $result->num_rows > 0 ) {
 			$this->data['latestProducts'] = $result->fetch_all( MYSQLI_ASSOC );
-			// echo '<pre>';
-			// print_r($this->data['latestProducts']);
-			// echo '</pre>';
-			// die();
+			
 		}
 
 
+	}
+
+	private function addtoCart(){
+
+		die('hello');
 	}
 
 }

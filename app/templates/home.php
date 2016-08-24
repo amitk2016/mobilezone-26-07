@@ -140,17 +140,24 @@
       <h1 class="latest">Latest Products</h1>
       <div class="container-fluid">
         <div class="row">
+
           <?php foreach($latestProducts as $Product): ?>
             <div class="col-sm-6 col-md-3">
               <div class="thumbnail">
                     <img src="assets/images/uploads/original/<?=$Product['image']?>" alt="iphone1">
                     <div class="caption">
-                      <h4><?=$Product['title']?></h4>
-                      <span><b style="margin-right:40px;">$ <?=$Product['price']?></b></span>
-                      <span style="color:red;"><s>$ <?=$Product['list_price']?></s></span>
-                      <p style="margin-top:20px;"><a href="index.php?page=products&productid=<?=$Product['id']?>" class="btn btn-success" role="button">Details</a>
-                          <a href="index.php?page=cart&productid=<?=$Product['id']?>" name="hpAddToCart" class="btn btn-primary" role="button">Add to Cart</a>
-                      </p>
+                        <h4><?=$Product['title']?></h4>
+                        <span><b style="margin-right:40px;">Price: $ <?=$Product['price']?></b></span>
+                        <span style="color:red;"><s>$ <?=$Product['list_price']?></s></span>
+                        <div style="margin-top:20px;">
+                          <p style="display:inline;">
+                          <a href="index.php?page=products&productid=<?=$Product['id']?>"  class="btn btn-success" role="button">Details</a>
+                        </p>
+                          <form action="index.php?page=cart&productid=<?=$Product['id']?>" method="post" style ="display:inline;">
+                            <button class="btn btn-primary" name="latestProductCart" >Add to Cart</button>
+                          </form>
+                        </div>
+                        
                     </div>
               </div>
             </div>
