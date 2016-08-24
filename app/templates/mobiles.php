@@ -9,9 +9,9 @@
 
 
 
-<div class="container-fluid mobile-box">
+<div class="container mobile-box">
 	<!-- Left sidebar -->
-	<div class="col-md-2">
+	<!-- <div class="col-md-2">
     <p class="lead">Category</p>
       <div class="list-group">
           <a href="#" class="list-group-item active">Brands</a>
@@ -21,205 +21,32 @@
           <a href="#" class="list-group-item">Nokia</a>
           <a href="#" class="list-group-item">Motorola</a>
       </div>
-	</div>
+	</div> -->
 	<!-- Main content  -->
-	<div class="col-md-9">
+	<div>
+		
 		<div class="row">
 			<h2 class="text-center">Mobile Products</h2>
-
-        <?php foreach($allProducts as $product): ?>
+	        <?php foreach($allProducts as $product): ?>
 				<div class="col-md-3">
 					<h4><?=htmlentities($product['title'])?></h4>
 					<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
-          <br>
+	         
 					<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
 					<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
-          			<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
-
-          			<form action="index.php?page=mobile&productid=<?=$product['id']?>" method="post">
-          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
-          		 	</form>
-
+	          		<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
+	          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
+	          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
+	          		 </form>
 				</div>
-        <?php endforeach ?>
-
-			<!-- <div class="col-md-3">
-				<h4>IPhones</h4>
-				<img src="assets/images/iphone5.jpg" alt="iphone5" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>IPhones</h4>
-				<img src="assets/images/iphone5.jpg" alt="iphone5" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>IPhones</h4>
-				<img src="assets/images/iphone5.jpg" alt="iphone5" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Samsung</h4>
-				<img src="assets/images/samsung-7.jpg" alt="Samsung" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Samsung</h4>
-				<img src="assets/images/samsung-7.jpg" alt="Samsung" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Samsung</h4>
-				<img src="assets/images/samsung-7.jpg" alt="Samsung" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Samsung</h4>
-				<img src="assets/images/samsung-7.jpg" alt="Samsung" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Xiaomi</h4>
-				<img src="assets/images/xiaomi.jpg" alt="Xiaomi" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Xiaomi</h4>
-				<img src="assets/images/xiaomi.jpg" alt="Xiaomi" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Xiaomi</h4>
-				<img src="assets/images/xiaomi.jpg" alt="Xiaomi" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>Xiaomi</h4>
-				<img src="assets/images/xiaomi.jpg" alt="Xiaomi" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>OnePlus</h4>
-				<img src="assets/images/oneplus.jpeg" alt="oneplus" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>OnePlus</h4>
-				<img src="assets/images/oneplus.jpeg" alt="oneplus" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>OnePlus</h4>
-				<img src="assets/images/oneplus.jpeg" alt="oneplus" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>OnePlus</h4>
-				<img src="assets/images/oneplus.jpeg" alt="oneplus" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>HTC</h4>
-				<img src="assets/images/htc.jpeg" alt="HTC" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>HTC</h4>
-				<img src="assets/images/htc.jpeg" alt="HTC" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>HTC</h4>
-				<img src="assets/images/htc.jpeg" alt="HTC" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div>
-			<div class="col-md-3">
-				<h4>HTC</h4>
-				<img src="assets/images/htc.jpeg" alt="HTC" />
-				<p class="list-price text-danger">List Prices <s>$999</s></p>
-				<p class="price">Our Price : $900</p>
-				<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">
-					Details
-				</button>
-			</div> -->
+	    	<?php endforeach ?>	    	
 		</div>
+		
 	</div>
 
-	<div class="col-md-1">
+	<!-- <div class="col-md-1">
 		Right side bar
-	</div>
+	</div> -->
 </div>
 <!-- Details Modal -->
 <div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">

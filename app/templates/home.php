@@ -145,9 +145,10 @@
               <div class="thumbnail">
                     <img src="assets/images/uploads/original/<?=$Product['image']?>" alt="iphone1">
                     <div class="caption">
-                      <h3><?=$Product['title']?></h3>
-                      <p><?=$Product['description']?></p>
-                      <p><a href="index.php?page=products&productid=<?=$Product['id']?>" class="btn btn-success" role="button">Details</a>
+                      <h4><?=$Product['title']?></h4>
+                      <span><b style="margin-right:40px;">$ <?=$Product['price']?></b></span>
+                      <span style="color:red;"><s>$ <?=$Product['list_price']?></s></span>
+                      <p style="margin-top:20px;"><a href="index.php?page=products&productid=<?=$Product['id']?>" class="btn btn-success" role="button">Details</a>
                           <a href="index.php?page=cart&productid=<?=$Product['id']?>" name="hpAddToCart" class="btn btn-primary" role="button">Add to Cart</a>
                       </p>
                     </div>

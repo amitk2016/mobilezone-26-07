@@ -273,7 +273,9 @@ h1.hot-heading{
 .mobile-box{
 	padding-top:100px;
 }
-
+.product-del{
+	display: inline;
+}
 
 
 

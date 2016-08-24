@@ -24,7 +24,7 @@ class HomeController extends PageController{
 
 	private function getLatestProducts() {
 
-		$sql = "SELECT id,title, price, description,date_added,image
+		$sql = "SELECT id,title, price, description,date_added,image,list_price
             FROM mobiles
             ORDER BY date_added DESC
             LIMIT 4";
