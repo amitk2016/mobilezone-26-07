@@ -3,6 +3,12 @@
     'title'=> "Mobile Phones",
     'description'=> "Latest Mobile Phones"
     ]);
+
+  $Allcount = count($allProducts);
+  $count = 1;
+
+
+
  ?>
 
 
@@ -14,6 +20,10 @@
 			<?php if( count($allProducts) > 0 ):?>
 
 		        <?php foreach($allProducts as $product): ?>
+		        	<?php if($count%4 ==1 ): ?>
+		        		<div class="row">
+		        	<?php endif; ?>
+		        	
 					<div class="col-md-3" >
 						<h4><?=htmlentities($product['title'])?></h4>
 						<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="phones"/>
@@ -31,8 +41,16 @@
 		          		<?php endif; ?>
 
 					</div>
-		    	<?php endforeach ?>	
 
+					<?php  if($count%4 == 0):?>
+						</div>
+					<?php endif; ?>
+					<?php $count++ ?>
+		    	<?php endforeach ?>	
+		    	<!-- This is to ensure there is no open div if the number of elements in user_kicks is not a multiple of 4 -->
+		    	<?php if($count%4 != 1):  ?>
+		    		</div>
+		    	<?php endif; ?>
 		    <?php else: ?>
 				  <p>
 				    Can't find any products on this page.

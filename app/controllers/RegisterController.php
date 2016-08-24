@@ -168,7 +168,7 @@ class RegisterController extends PageController{
 			// Log the user in
 			$_SESSION['id'] = $this->db->insert_id;
 			$_SESSION['privilege'] = 'user' ;
-			$_SESSION['name'] = 'first_name';
+			$_SESSION['name'] = $filteredfName;
 			// Redirect the user to homepage
 
 			header('Location: index.php?page=home');

@@ -42,7 +42,7 @@
 								</div>
 							  	</li>
 							  </ul>	
-							<h5><a href="register.php">Don' have an account? Sign Up!</a></h5>	
+							<h5><a href="index.php?page=register">Don' have an account? Sign Up!</a></h5>	
 						</form>
 					</div>
 				</div>

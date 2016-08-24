@@ -95,6 +95,7 @@ switch ($page) {
   case 'logout':
       unset($_SESSION['id']);
       unset($_SESSION['privilege']);
+      unset($_SESSION['name']);
       header('Location: index.php');
   break;
 

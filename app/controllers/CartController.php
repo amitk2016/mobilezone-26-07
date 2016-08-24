@@ -10,7 +10,7 @@ class CartController extends PageController{
 
 		$this->db = $dbc;
 
-		if( isset($_POST['addtoCart'])){
+		if( isset($_POST['addtoCart']) ){
 			$this->addtoCart();
 		}
 	

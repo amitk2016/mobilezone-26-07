@@ -25,7 +25,6 @@
   </head>
   <body>
       <!-- navbar starts  -->
-
       <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" style=" border-radius:0px !important; margin-bottom:0px;">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,20 +67,23 @@
 
 
                   <ul class="nav navbar-nav navbar-right">
+                   <?php if ( isset($_SESSION['id'] )): ?>
+                      <?php if ($_SESSION['privilege'] == 'admin'): ?>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                            <ul class="dropdown-menu nav-ul">
+                                <li><a href="index.php?page=adminproducts">Products</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="index.php?page=products">Users</a></li>
+                            </ul>
+                        </li>
+                      <?php endif; ?>
+                   <?php endif; ?>
+                    
 
-                    <?php if ( isset($_SESSION['privilege'] ) == 'admin'): ?>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
-                          <ul class="dropdown-menu nav-ul">
-                              <li><a href="index.php?page=adminproducts">Products</a></li>
-                              <li role="separator" class="divider"></li>
-                              <li><a href="index.php?page=products">Users</a></li>
-                          </ul>
-                      </li>
-                    <?php endif; ?>
 
                     <?php if ( isset($_SESSION['privilege'] ) == 'user'): ?>
-                        <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
+                        <li><a href="index.php?page=users"><?=$_SESSION['name']?></a></li>
                     <?php endif; ?>
 
                       <?php if (!isset($_SESSION['id'])): ?>
