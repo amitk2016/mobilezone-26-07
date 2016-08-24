@@ -3,6 +3,14 @@
     'title'=> "CheckoutPage",
     'description'=> "Checkout here"
     ]);
+
+  $grandTotal = 0; 
+  foreach ($checkoutAllData as $checkoutTotal) {
+    $subtotal = $checkoutTotal['subtotal'];
+      $grandTotal =   $grandTotal + $subtotal ;
+  }
+
+
  ?>
 
 
@@ -241,7 +249,11 @@
                          <span style="font-weight:bold; font-size:16px; color:green;">Grand Total</span>
                        </div>
                        <div class="col-md-6 col-sm-6">
-                          <span class="pull-right" style="font-weight:bold; font-size:16px; color:green;">$3007</span>
+
+                  
+                             <span class="pull-right" style="font-weight:bold; font-size:16px; color:green;">$ <?=$grandTotal?></span>
+
+                          
 
                        </div>
                      </div>
