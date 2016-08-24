@@ -24,15 +24,46 @@ class MobileController extends PageController {
 		echo $this->plates->render('mobiles', $this->data);
 	}
 
+
+
+
 	private function getMobileProducts(){
+
+		if( isset($_GET['pagination']) ) {
+      	
+      		$paginationPage = $this->db->real_escape_string($_GET['pagination']);
+
+    	} else {
+
+    	  	$paginationPage = 1;
+    	}
+
+    	$sql = "SELECT COUNT(id) AS TotalProducts FROM mobiles";
+
+    	$result = $this->db->query($sql);
+    	$result = $result->fetch_assoc();
+
+    	$totalProducts = $result['TotalProducts'];
+
+    	$totalPages = $totalProducts / 8;
+
+    	$totalPages = ceil($totalPages);
+
+    	$this->data['totalPages'] = $totalPages;
+
+    	$offset = $paginationPage * 8 - 8;
 
 		//Prepare some sql
 		$sql = "SELECT *
-				FROM mobiles";
+				FROM mobiles LIMIT 8 OFFSET $offset";
 
 		// Run the Sql and capture the result
 
 		$result = $this->db->query($sql);
+
+		if( !$result ) {
+     		 die('Some Problem with the server, we are working on it,Thanks!');
+    	}
 
 		// Extract the results as an array
 		$allProducts = $result->fetch_all(MYSQLI_ASSOC);

@@ -22,32 +22,49 @@
           <a href="#" class="list-group-item">Motorola</a>
       </div>
 	</div> -->
-	<!-- Main content  -->
-	<div>
-		
+	<!-- Main content  -->	
 		<div class="row">
-			<h2 class="text-center">Mobile Products</h2>
-	        <?php foreach($allProducts as $product): ?>
-				<div class="col-md-3">
-					<h4><?=htmlentities($product['title'])?></h4>
-					<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
-	         
-					<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
-					<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
-	          		<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
-	          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
-	          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
-	          		 </form>
-				</div>
-	    	<?php endforeach ?>	    	
-		</div>
-		
-	</div>
+			<h2 class="text-center">Mobile Products (<?=count($allProducts)?>)</h2>
 
-	<!-- <div class="col-md-1">
-		Right side bar
-	</div> -->
+			<?php if( count($allProducts) > 0 ):?>
+
+		        <?php foreach($allProducts as $product): ?>
+					<div class="col-md-3">
+						<h4><?=htmlentities($product['title'])?></h4>
+						<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="iphone5" />
+		         
+						<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
+						<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
+		          		<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
+		          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
+		          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
+		          		 </form>
+					</div>
+		    	<?php endforeach ?>	
+
+		    <?php else: ?>
+				  <p>
+				    Can't find any products on this page.
+				  </p>
+
+			<?php endif; ?>  
+
+			<ul>
+
+			  <?php for($i=1; $i<=$totalPages; $i++): ?>
+
+				  <li>
+				    <a href="index.php?page=mobile&pagination=<?= $i ?>">
+				      Page <?= $i ?>
+				    </a>
+				  </li>
+
+			  <?php endfor; ?>
+
+			</ul>
+		</div>	
 </div>
+
 <!-- Details Modal -->
 <div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
