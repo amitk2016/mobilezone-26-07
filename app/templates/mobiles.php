@@ -21,9 +21,15 @@
 						<p class="list-price text-danger">List Prices <s>$<?=htmlentities($product['list_price'])?></s></p>
 						<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
 		          		<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
-		          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
-		          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
-		          		 </form>
+
+		          		<?php if ( isset($_SESSION['privilege'] ) == 'admin'): ?>
+
+			          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
+			          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
+			          		</form>
+			          		
+		          		<?php endif; ?>
+
 					</div>
 		    	<?php endforeach ?>	
 

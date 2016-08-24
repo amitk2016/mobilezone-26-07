@@ -68,7 +68,8 @@
 
 
                   <ul class="nav navbar-nav navbar-right">
-                    <?php if ( isset($_SESSION['id']) == 'admin'): ?>
+
+                    <?php if ( isset($_SESSION['privilege'] ) == 'admin'): ?>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
                           <ul class="dropdown-menu nav-ul">
@@ -79,7 +80,9 @@
                       </li>
                     <?php endif; ?>
 
+                    <?php if ( isset($_SESSION['privilege'] ) == 'user'): ?>
                         <li><a href="index.php?page=users"><?=$_SESSION['id']?></a></li>
+                    <?php endif; ?>
 
                       <?php if (!isset($_SESSION['id'])): ?>
                         <li><a href="index.php?page=login">Login</a></li>
