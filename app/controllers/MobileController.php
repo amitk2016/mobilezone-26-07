@@ -8,20 +8,18 @@ class MobileController extends PageController {
 		parent::__construct();
 
 		$this->db = $dbc;
+
+		if ( isset($_POST['product-delete']) ) {
+			$this->deleteItem();
+		}
+
+		$this->getMobileProducts();
+
+
 	}
 
 
-	// public function __construct(argument)
-	// {
-	// 	# code...
-	// }
-
 	public function buildHTML(){
-
-		//Get the products from database
-		$allProducts = $this->getMobileProducts();
-
-		$this->data['allProducts'] = $allProducts;
 
 		echo $this->plates->render('mobiles', $this->data);
 	}
@@ -40,13 +38,21 @@ class MobileController extends PageController {
 		$allProducts = $result->fetch_all(MYSQLI_ASSOC);
 		// die($allProducts);
 
-		return $allProducts;
+		$this->data['allProducts'] = $allProducts;
 
 
+	}
 
-		// return the results to the code that called this function
+	private function deleteItem(){
 
+		$userID = $_SESSION['id'];
+		
+		$productID = $this->db->real_escape_string( $_GET['productid'] );
 
+		$sql = "DELETE FROM mobiles 
+				WHERE mobiles.id = $productID";
+
+		$result = $this->db->query($sql);
 
 	}
 
