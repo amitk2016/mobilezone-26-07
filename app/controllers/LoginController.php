@@ -84,6 +84,7 @@ class LoginController extends PageController {
 					$_SESSION['id'] = $userData['id'];
 					$_SESSION['privilege'] = $userData['privilege'];
 					$_SESSION['name'] = $userData['first_name'];
+					$_SESSION['Loggedin'] = 'true';
 					
 
 					header('Location: index.php?page=home');

@@ -31,7 +31,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="center-block">
-                    <img src="assets/images/uploads/original/<?=($product['image'])?>" alt="Iphone" class="details img-responsive">
+                    <img src="assets/images/uploads/eachproduct/<?=($product['image'])?>" alt="Iphone" class="details img-responsive">
                   </div>
 
                 </div>

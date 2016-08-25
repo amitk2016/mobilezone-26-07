@@ -96,6 +96,7 @@ class CartController extends PageController{
 		// Run the SQL
 		$results = $this->db->query($sql);
 
+		
 
 		// if the query failed
 		if ( !$results || $results->num_rows == 0 ) {
@@ -105,7 +106,10 @@ class CartController extends PageController{
 		}else{
 
 			$this->data['cartAllData'] = $results->fetch_all(MYSQL_ASSOC);
-
+			// echo '<pre>';
+			// print_r($this->data['cartAllData'] );
+			// echo '</pre>';
+			// die();
 		}
 
 	}

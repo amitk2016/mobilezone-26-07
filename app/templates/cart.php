@@ -3,6 +3,12 @@
     'title'=> "CartPage",
     'description'=> "Enjoy your shopping"
     ]);
+
+    $grandTotal = 0; 
+  foreach ($cartAllData as $checkoutTotal) {
+    $subtotal = $checkoutTotal['subtotal'];
+      $grandTotal =   $grandTotal + $subtotal ;
+  }
  ?>
 
 
@@ -135,7 +141,7 @@
               <div class="panel-footer">
                 <div class="row">
                     <div class="col-md-9 col-xs-12 text-right" >
-                      <h4><strong>Total $ 1099</strong></h4>
+                      <h4><strong>Total $ <?=$grandTotal?></strong></h4>
                     </div>
                     <div class="col-md-3" col-xs-12>
                       <a href="index.php?page=checkout"><button class="btn btn-success btn-lg btn-block">Checkout</button></a>

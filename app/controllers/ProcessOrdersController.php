@@ -36,6 +36,7 @@ class ProcessOrdersController extends PageController{
 		$processOrderData = $results->fetch_all(MYSQL_ASSOC);
 
 		$orderID = rand();
+
 		foreach($processOrderData as $orderEachItem){
 			
 			$cartID = $orderEachItem['cart_item_id'];
@@ -53,6 +54,7 @@ class ProcessOrdersController extends PageController{
 
 			$sql = "INSERT INTO checkout (checkout.order_id,user_id,product_id,title,subtotal,qty,price)
 					VALUES ($orderID,$userID,$productID,'$title',$subtotal,$qty,$price)";
+					// var_dump($processOrderData);
 
 			
 
