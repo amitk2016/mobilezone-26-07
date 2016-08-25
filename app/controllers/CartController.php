@@ -13,6 +13,10 @@ class CartController extends PageController{
 		if( isset($_POST['addtoCart']) ){
 			$this->addtoCart();
 		}
+		
+		if( isset($_POST['latestProductCart']) ){
+			$this->latestProductCart();
+		}
 	
 		if ( isset($_POST['cart-delete']) ) {
 			$this->deleteItem();
@@ -53,6 +57,29 @@ class CartController extends PageController{
 				 VALUES ('$userID', '$productID', '$quantity', '$subtotal')";
 		
 		$this->db->query($sql1);
+	}
+
+	private function latestProductCart(){
+
+		$userID = $_SESSION['id'];
+
+		$productID = $_GET['productid'];
+		
+
+		$sql = "SELECT price
+				FROM mobiles
+				WHERE id ='$productID' ";
+
+		$result = $this->db->query($sql);
+
+		$productPrice = $result->fetch_assoc();
+		$price = $productPrice['price'];
+
+		$sql1 = "INSERT INTO cart(user_id,product_id,subtotal)
+				 VALUES ('$userID','$productID','$price')";
+
+		$this->db->query($sql1);
+
 	}
 
 	private function getCartData(){

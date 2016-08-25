@@ -24,7 +24,7 @@
 		        		<div class="row">
 		        	<?php endif; ?>
 		        	
-					<div class="col-md-3" >
+					<div class="col-md-3" style="margin-bottom:20px;">
 						<h4><?=htmlentities($product['title'])?></h4>
 						<img src="assets/images/uploads/products/<?=($product['image'])?>" alt="phones"/>
 		         
@@ -32,15 +32,27 @@
 						<p class="price">Our Price : $<?=htmlentities($product['price'])?></p>
 		          		<a href="index.php?page=products&productid=<?=$product['id']?>" class="btn btn-primary btn-sm active" role="button">Details</a>
 
-		          		<?php if ( isset($_SESSION['privilege'] ) == 'admin'): ?>
+		          		 <?php if ( isset($_SESSION['id'] )): ?>
 
-			          		<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
-			          			<button class="btn btn-danger btn-sm active" name="product-delete">Delete</button>
-			          		</form>
-			          		
-		          		<?php endif; ?>
+		          		 	<?php if ($_SESSION['privilege'] == 'admin'): ?>
+
+			          			<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
+			          				<button class="btn btn-danger btn-sm active"  id="delete-product"  name="product-delete" >Delete</button>
+			          				
+			          			</form>
+			          			
+
+		          			<?php endif; ?>
+
+		          		 <?php endif; ?>
 
 					</div>
+
+
+
+
+
+
 
 					<?php  if($count%4 == 0):?>
 						</div>
@@ -58,7 +70,7 @@
 
 			<?php endif; ?>  
 
-			<ul>
+			<ul style="text-align:center;margin-top:20px;">
 
 			  <?php for($i=1; $i<=$totalPages; $i++): ?>
 
@@ -73,6 +85,26 @@
 			</ul>
 		<!-- </div>	 -->
 </div>
+
+<!-- <script>
+	
+
+	// Wait for all the stuff to be ready
+	$(document).ready(function(){
+
+		// When the user clicks on the delete button
+		$('#delete-product').click(function(){
+
+			console.log('hello');
+			// // Toggle the visibility of the controls
+			// $('#delete-admin-product').toggle();
+
+		});
+
+	});
+
+</script> -->
+
 
 <!-- Details Modal -->
 <!-- <div class="modal fade details-1" id="details-1" tabindex ="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true">

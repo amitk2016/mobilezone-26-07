@@ -110,6 +110,12 @@ class AdminController extends PageController
 			$image->save("assets/images/uploads/products/{$fileName}{$fileExtension}");
 
 
+			$image->resize(400, null, function ($constraint) {
+				    $constraint->aspectRatio();
+			});
+
+			$image->save("assets/images/uploads/eachproduct/{$fileName}{$fileExtension}");
+
 			// filter the data
 			$title = $this->db->real_escape_string($title);
 			$desc = $this->db->real_escape_string($desc);

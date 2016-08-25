@@ -33,6 +33,7 @@
     		<option value="xiaomi">Xiaomi</option>
     		<option value="oneplus">Oneplus</option>
     		<option value="htc">HTC</option>
+        <option value="lg">LG</option>
     </select>
     <span><?= isset($brandMessage) ? $brandMessage : '' ?></span>
    </div>

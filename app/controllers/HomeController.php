@@ -11,14 +11,8 @@ class HomeController extends PageController{
 
 		$this->db = $dbc;
 
-		
-
 		$this->getLatestProducts();
 		
-		if( isset ($_POST['latestProductCart'] ) ){
-			die('hello');
-			$this->addtoCart();
-		}
 	}
 
 
@@ -52,9 +46,6 @@ class HomeController extends PageController{
 
 	}
 
-	private function addtoCart(){
-
-		die('hello');
-	}
+	
 
 }
