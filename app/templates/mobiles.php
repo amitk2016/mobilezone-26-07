@@ -38,7 +38,9 @@
 
 			          			<form action="index.php?page=mobile&productid=<?=$product['id']?>" class="product-del" method="post">
 			          				<button class="btn btn-danger btn-sm active"  id="delete-product"  name="product-delete" >Delete</button>
-			          				
+			          			</form>
+			          			<form action="index.php?page=editproducts&productid=<?=$product['id']?>" class="product-del" method="post">
+			          				<button class="btn btn-warning btn-sm active"  id="delete-product"  name="product-delete" >Edit</button>
 			          			</form>
 			          			
 

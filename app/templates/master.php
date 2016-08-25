@@ -74,7 +74,9 @@
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
                             <ul class="dropdown-menu nav-ul">
-                                <li><a href="index.php?page=adminproducts">Products</a></li>
+                                <li><a href="index.php?page=adminproducts">AddProducts</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="index.php?page=editproducts">EditProducts</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="index.php?page=products">Users</a></li>
                             </ul>

@@ -86,6 +86,12 @@ switch ($page) {
      $controller = new AdminController($dbc);
   break;
 
+  case 'editproducts':
+     require 'app/controllers/EditProductController.php';
+     $controller = new EditProductController($dbc);
+  break;
+
+
   case 'search':
   		require 'app/controllers/SearchController.php';
   		$controller = new SearchController($dbc);

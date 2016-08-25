@@ -6,6 +6,7 @@ use Intervention\Image\ImageManager;
 class AdminController extends PageController
 {
 		private $acceptableImageTypes = ['image/jpeg','image/png','image/gif','image/bmp','image/tiff'];
+
 		public function __construct($dbc){
 			parent::__construct();
 
@@ -18,16 +19,21 @@ class AdminController extends PageController
 			// if ( isset ( $_POST['update-contact']) ) {
 			// 	$this->updateContactDetails();
 			// }
+
 			//Admin added a new product
 			if ( isset ( $_POST['admin-new-product'] ) ) {
 				$this->processNewProducts();
 			}
+
 		}
 
 	public function buildHTML(){
 
 		echo $this->plates->render('adminproducts',$this->data);
 	}
+
+
+	
 
 	private function processNewProducts(){
 		$totalErrors = 0;
@@ -124,7 +130,7 @@ class AdminController extends PageController
 			$userID = $_SESSION['id'];
 			//SQL
 			$sql = "INSERT INTO mobiles(title,price,list_price,brand,categories,description,image)
-							VALUES ('$title',$price,$list_price,'$brand','$categories','$desc','$fileName$fileExtension')";
+					VALUES ('$title',$price,$list_price,'$brand','$categories','$desc','$fileName$fileExtension')";
 
 			$this->db->query($sql);
 
@@ -142,6 +148,9 @@ class AdminController extends PageController
 
 
 	}
+
+
+	
 
 	private function getFileExtension($mimeType){
 
