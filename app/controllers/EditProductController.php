@@ -196,6 +196,11 @@ class EditProductController extends PageController {
 
 				$image->save("assets/images/uploads/products/$fileName$fileExtension");
 
+				
+
+
+
+
 				// unlink("assets/images/uploads/original/$imageName");
 				// unlink("assets/images/uploads/products/$imageName");
 
