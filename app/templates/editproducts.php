@@ -1,8 +1,8 @@
 <?php
-  // $this->layout('master',[
-  //   'title'=> "Admin  Edit Product Page",
-  //   'description'=>"Admin can Edit products on this page"
-  // ]);
+  $this->layout('master',[
+    'title'=> "Admin  Edit Product Page",
+    'description'=>"Admin can Edit products on this page"
+  ]);
 ?>
 
 

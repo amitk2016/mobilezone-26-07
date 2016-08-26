@@ -109,6 +109,14 @@ class AdminController extends PageController
 
 			$image->save("assets/images/uploads/original/{$fileName}{$fileExtension}");
 
+
+			$image->resize(300, null, function ($constraint) {
+				    $constraint->aspectRatio();
+			});
+
+			$image->save("assets/images/uploads/eachproduct/{$fileName}{$fileExtension}");
+			
+
 			$image->resize(140, null, function ($constraint) {
 				    $constraint->aspectRatio();
 			});
@@ -116,11 +124,7 @@ class AdminController extends PageController
 			$image->save("assets/images/uploads/products/{$fileName}{$fileExtension}");
 
 
-			$image->resize(300, null, function ($constraint) {
-				    $constraint->aspectRatio();
-			});
-
-			$image->save("assets/images/uploads/eachproduct/{$fileName}{$fileExtension}");
+		
 
 			// filter the data
 			$title = $this->db->real_escape_string($title);

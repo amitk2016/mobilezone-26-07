@@ -155,11 +155,14 @@
                           <a href="index.php?page=products&productid=<?=$Product['id']?>"  class="btn btn-success" role="button">Details</a>
                         </p>
 
+                        <?php if ( isset($_SESSION['id']) ): ?>
 
                           <form action="index.php?page=cart&productid=<?=$Product['id']?>" method="post" style ="display:inline;">
                             <button class="btn btn-primary" name="latestProductCart" >Add to Cart</button>
                           </form>
-
+                          
+                        <?php endif ?>
+                          
                         </div>
                         
                     </div>

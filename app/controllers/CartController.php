@@ -10,10 +10,25 @@ class CartController extends PageController{
 
 		$this->db = $dbc;
 
+
+
 		if( isset($_POST['addtoCart']) ){
-			$this->addtoCart();
+
+			if (isset($_SESSION['id'])) {
+
+				$this->addtoCart();
+
+			}else{
+				
+			 header("Location: index.php?page=login");
+			}
+			
 		}
 		
+
+
+
+
 		if( isset($_POST['latestProductCart']) ){
 			$this->latestProductCart();
 		}
