@@ -1,15 +1,16 @@
 <?php
-  $this->layout('master',[
-    'title'=> "Admin  Edit Product Page",
-    'description'=>"Admin can Edit products on this page"
-  ]);
+  // $this->layout('master',[
+  //   'title'=> "Admin  Edit Product Page",
+  //   'description'=>"Admin can Edit products on this page"
+  // ]);
 ?>
 
 
 
 
 
-                <form class="update-form" action="index.php?page=editproducts" method="post" enctype="multipart/form-data">
+                <form class="update-form" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post" enctype="multipart/form-data">
+
                    <h2>Update Product</h2>
                    <div class="form-group">
                      <label for="title">Title:</label>
@@ -62,6 +63,17 @@
                      <span><?= isset($imageMessage) ? $imageMessage : '' ?></span>
                    </div>
                    <button type="submit" name="admin-edit-products" class="btn btn-block btn-success">Submit</button>
-                   <span><?= isset($postMessage) ?$postMessage : '' ?></span>
+                   <span><?= isset($updateMessage) ?$updateMessage : '' ?></span>
+
+                </form>
+
+
+
+
+
+
+
+
+
 
                 </form>
