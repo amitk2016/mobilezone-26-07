@@ -96,11 +96,11 @@
 
     <div class="clearfix" style="margin-bottom:20px;"></div>
 
-      <div class="container-fluid hot-box">
+      <!-- <div class="container-fluid hot-box">
         <h1 class="hot-heading">Products</h1>
         <div class="row hot-row">
 
-          <div class="col-md-4 col-sm-4 col-xs-12 hot-products">
+          <div class="col-md-4 center-block col-sm-4 col-xs-12 hot-products">
             <img src="assets/images/phones.jpg" alt="cat image" class="img-responsive hot-img">
             <h2 class="p-heading">Phones</h2>
             <a href="index.php?page=mobile" class="btn btn-primary btn-lg">Shop Now</a>
@@ -116,7 +116,14 @@
             <a href="index.php?page=products" class="btn btn-primary btn-lg">Shop Now</a>
           </div>
         </div>
-      </div>
+      </div> -->
+      <div class="row">
+        <div class="center-block col-md-4" style="float: none;">
+           <img src="assets/images/phones.jpg" alt="cat image" class="img-responsive hot-img">
+            <h2 class="p-heading">Phones</h2>
+            <a href="index.php?page=mobile" " class="btn btn-primary btn-lg">Shop Now</a>
+        </div>
+     </div>
 
       <!-- Clearance Sale box -->
       <div class="container-fluid clearance">
@@ -128,9 +135,7 @@
               <li><span>Limited time only</span></li>
               <li><span>Prices as marked</span></li>
             </ul>
-             <button class="btn btn-warning btn-lg">
-               Buy Now
-             </button>
+             <a href="index.php?page=mobile"><button class="btn btn-warning btn-lg">Buy Now</button></a>
         </div>
       </div>
 

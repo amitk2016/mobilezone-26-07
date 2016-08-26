@@ -7,8 +7,9 @@
     $grandTotal = 0; 
   foreach ($cartAllData as $checkoutTotal) {
     $subtotal = $checkoutTotal['subtotal'];
-      $grandTotal =   $grandTotal + $subtotal ;
+      $grandTotal =   $grandTotal + $subtotal ;      
   }
+
  ?>
 
 
@@ -49,16 +50,25 @@
                       <div class="col-md-6 col-xs-12">
 
                           <div class="col-md-6 text-right" >
-                            <h4><strong>$<?=$cartEachItem['price']?></strong>x</h4>
+                            <h4><strong>$<?=$cartEachItem['price']?> </strong>x</h4>
+                           
                           </div>
 
-                          <div class="col-md-4 col-xs-9">
-                            <input type="text" class="form-control input-sm" name="" value="<?=$cartEachItem['qty']?>">
+                       
+                            <div class="col-md-2 col-xs-9">
+                               <!-- <input type="text" class="form-control input-sm" name="quantity" value=""> -->
+                              <h4><?=$cartEachItem['qty']?></h4>
+                              
+
                           </div>
+                          
+                          
 
                           <form action="index.php?page=cart&cartID=<?=$cartEachItem['cart_item_id']?>" method="post">
-                            <div class="col-md-2 col-xs-2" >
+                            <div class="col-md-4 col-xs-2" >
+                            
                               <button name="cart-delete" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+                            <!--   <button class="btn btn-warning" name="cart-update">Update</button> -->
                             </div>
                           </form>
 
@@ -128,7 +138,7 @@
                   </div>
                   <hr> -->
 
-                  <div class="row">
+                 <!--  <div class="row">
                     <div class="col-md-9 col-xs-12 text-right" >
                       <h5>Added Items</h5>
                     </div>
@@ -136,7 +146,7 @@
                       <button class="btn btn-default btn-sm btn-block">Update Cart</button>
 
                     </div>
-                  </div>
+                  </div> -->
               </div>
               <div class="panel-footer">
                 <div class="row">

@@ -225,20 +225,20 @@
                      <hr>
 
                      <div class="row">
-                       <div class="col-md-6 col-sm-6">
+                       <!-- <div class="col-md-6 col-sm-6">
                          <span style="font-weight:bold; font-size:16px;">Sub total</span>
                        </div>
                        <div class="col-md-6 col-sm-6">
                           <span class="pull-right" style="font-weight:bold; font-size:16px;">$2997</span>
 
-                       </div>
+                       </div> -->
                      </div>
                      <div class="row">
                        <div class="col-md-6 col-sm-6">
-                         <span style="font-weight:bold; font-size:16px;">Shipping</span>
+                        <!--  <span style="font-weight:bold; font-size:16px;">Shipping</span> -->
                        </div>
                        <div class="col-md-6 col-sm-6">
-                          <span class="pull-right" style="font-weight:bold; font-size:16px;">$10</span>
+                         <!--  <span class="pull-right" style="font-weight:bold; font-size:16px;">$10</span> -->
 
                        </div>
                      </div>

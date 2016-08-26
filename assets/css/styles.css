@@ -140,9 +140,10 @@ h1.hot-heading{
 
 /*---Clearance Style Starts ----*/
 .clearance{
-	background-color:#e74c3c;
+	background-color:#75DBF0;
 	height:220px;
 	text-align: center;
+	margin-top:20px;
 
 }
 .clearance h1{

@@ -59,9 +59,9 @@
                         <ul class="dropdown-menu nav-ul">
                             <li><a href="index.php?page=mobile">Mobiles</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="index.php?page=products">Tablets</a></li>
+                            <!-- <li><a href="index.php?page=products">Tablets</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="index.php?page=products">Accessories</a></li>
+                            <li><a href="index.php?page=products">Accessories</a></li> -->
                         </ul>
                     </li>
                     <li><a href="index.php?page=contact">Contact</a></li>
@@ -123,7 +123,19 @@
 
      <hr class="divider line-after-payment">
 
-    <footer>
+
+<footer style="background-color:#34495e;padding:40px 15px;height:100px;">
+    <div class="container"></div>
+  <!--   <hr> -->
+    <div class="row">
+      <div class="col-md-12">
+        <p class="pull-right"><a href="#" style="color:white;">Back to top</a></p>
+        <p style="color:white;">Copyright &copy; <?php echo Date('Y')?>MobileZone</p>
+      </div>
+    </div>
+  </footer>
+
+   <!--  <footer>
       <div class="container-fluid footer-box">
         <div class="container col-md-6">
           <div class="row footer-l-row">
@@ -164,7 +176,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Marketing Ends here -->
 
 

@@ -19,14 +19,17 @@ class CartController extends PageController{
 				$this->addtoCart();
 
 			}else{
-				
+
 			 header("Location: index.php?page=login");
 			}
 			
 		}
 		
 
-
+		// if (isset($_POST['cart-update'])) {
+			
+		// 	$this->updateCart();
+		// }
 
 
 		if( isset($_POST['latestProductCart']) ){
@@ -142,6 +145,29 @@ class CartController extends PageController{
 
 
 	}
+
+	// private function updateCart(){
+
+	// 	$userID = $_SESSION['id'];
+
+	// 	$cartID = $_GET['cartID'];
+
+	// 	$sql = "SELECT qty 
+	// 			FROM cart
+	// 			WHERE id = $cartID";
+
+	// 	$result = $this->db->query($sql);
+
+	// 	$qty = $_POST['quantity'];
+
+	// 	$sql = "UPDATE cart 
+	// 			SET qty = $qty
+	// 			WHERE id = $cartID";
+
+	// 	$result = $this->db->query($sql);
+
+
+	// }
 
 
 
